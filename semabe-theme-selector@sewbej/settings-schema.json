@@ -1,0 +1,266 @@
+{
+  "layout1": {
+    "type": "layout",
+    "pages": ["page1", "page2"],
+
+    "page1": {
+      "type": "page",
+      "title": "Semabe theme",
+      "sections": ["section-gtk", "section-cinnamon", "section-window-controls"]
+    },
+
+    "page2": {
+      "type": "page",
+      "title": "Symbolic icons",
+      "sections": ["section-directory", "section-controls", "section-arrows", "section-restore"]
+    },
+
+    "section-gtk": {
+      "type": "section",
+      "title": "Applications",
+      "keys": ["color", "transparency"]
+    },
+
+    "section-cinnamon": {
+      "type": "section",
+      "title": "Desktop",
+      "keys": ["color-cinn", "transparency-cinn"]
+    },
+
+    "section-window-controls": {
+      "type": "section",
+      "title": "Window control buttons",
+      "keys": [
+        "window-controls",
+        "size1",
+        "size2",
+        "size3",
+        "size4",
+        "size5",
+        "size6",
+        "size7"
+      ]
+    },
+
+    "section-directory": {
+      "type": "section",
+      "title": "Info",
+      "keys": ["label-info"]
+    },
+    "section-controls": {
+      "type": "section",
+      "title": "Window controls",
+      "keys": ["controls-style", "controls_btn"]
+    },
+    "section-arrows": {
+      "type": "section",
+      "title": "Arrows",
+      "keys": ["arrows-style", "arrows_btn"]
+    },
+    "section-restore": {
+      "type": "section",
+      "title": "Restore",
+      "keys": ["restore_btn"]
+    }
+  },
+
+  "label-info": {
+    "type": "label",
+    "description": "Replace the window control icons that appear in the context menu (minimize, maximize, close) and the arrows used in the tree view and as submenu indicators.\n\nThe modification will take place in the user's local directory “.local/share/icons”. No system files will be replaced."
+  },
+
+  "color": {
+    "type": "combobox",
+    "default": "Steel",
+    "description": "Theme color",
+    "options": {
+      "Azure": "Azure",
+      "Cinnamon": "Cinnamon",
+      "Crimson": "Crimson",
+      "Falcon": "Falcon",
+      "Grey": "Grey",
+      "Mint": "Mint",
+      "Nordic": "Nordic",
+      "Steel": "Steel",
+      "Violet": "Violet"
+    }
+  },
+
+  "transparency": {
+    "type": "combobox",
+    "default": "Opaque",
+    "description": "Transparency level",
+    "options": {
+      "Glassy": "Glassy",
+      "Translucent": "Translucent",
+      "Opaque": "Opaque"
+    }
+  },
+
+  "color-cinn": {
+    "type": "combobox",
+    "default": "Steel",
+    "description": "Theme color",
+    "options": {
+      "Azure": "Azure",
+      "Cinnamon": "Cinnamon",
+      "Crimson": "Crimson",
+      "Falcon": "Falcon",
+      "Grey": "Grey",
+      "Mint": "Mint",
+      "Nordic": "Nordic",
+      "Steel": "Steel",
+      "Violet": "Violet"
+    }
+  },
+
+  "transparency-cinn": {
+    "type": "combobox",
+    "default": "Opaque",
+    "description": "Transparency level",
+    "options": {
+      "Glassy": "Glassy",
+      "Translucent": "Translucent",
+      "Opaque": "Opaque"
+    }
+  },
+
+  "window-controls": {
+    "type": "combobox",
+    "default": "legacy",
+    "description": "Buttons style",
+    "options": {
+      "Legacy": "legacy",
+      "Ambiance": "ambiance",
+      "macOS": "macOS",
+      "Breeze": "breeze",
+      "LED": "LED",
+      "Zephyr": "zephyr",
+      "Human": "human"
+    }
+  },
+
+  "size1": {
+    "type": "combobox",
+    "default": "L",
+    "description": "Buttons size",
+    "dependency": "window-controls=legacy",
+    "options": { "L": "L" }
+  },
+
+  "size2": {
+    "type": "combobox",
+    "default": "L",
+    "description": "Buttons size",
+    "dependency": "window-controls=ambiance",
+    "options": { "M": "M", "L": "L" }
+  },
+
+  "size3": {
+    "type": "combobox",
+    "default": "L",
+    "description": "Buttons size",
+    "dependency": "window-controls=macOS",
+    "options": {
+      "S": "S",
+      "M": "M",
+      "L": "L",
+      "XL": "XL",
+      "XXL": "XXL"
+    }
+  },
+
+  "size4": {
+    "type": "combobox",
+    "default": "L",
+    "description": "Buttons size",
+    "dependency": "window-controls=breeze",
+    "options": {
+      "S": "S",
+      "M": "M",
+      "L": "L",
+      "XL": "XL",
+      "XXL": "XXL"
+    }
+  },
+
+  "size5": {
+    "type": "combobox",
+    "default": "L",
+    "description": "Buttons size",
+    "dependency": "window-controls=LED",
+    "options": { "S": "S", "M": "M", "L": "L" }
+  },
+
+  "size6": {
+    "type": "combobox",
+    "default": "L",
+    "description": "Buttons size",
+    "dependency": "window-controls=zephyr",
+    "options": { "S": "S", "M": "M", "L": "L" }
+  },
+
+  "size7": {
+    "type": "combobox",
+    "default": "L",
+    "description": "Buttons size",
+    "dependency": "window-controls=human",
+    "options": { "S": "S", "M": "M", "L": "L" }
+  },
+
+
+  "controls-style": {
+    "type": "combobox",
+    "default": "breeze",
+    "description": "Select window control icons style",
+    "options": {
+      "Breeze": "breeze",
+      "Human": "human",
+      "macOS": "macOS",
+      "Semabe": "semabe",
+      "Windows 10": "win10",
+      "Windows 11": "win11"
+    }
+  },
+
+    "controls_btn": {
+        "type": "button",
+        "description": "Replace window control icons",
+        "callback": "btn_controls_pressed"
+    },
+
+  "arrows-style": {
+    "type": "combobox",
+    "default": "breeze",
+    "description": "Select arrow icons style",
+    "options": {
+      "Adwaita": "Adwaita",
+      "Adwaita Bold": "Adwaita Bold",
+      "Boomerang": "Boomerang",
+      "Breeze": "Breeze",
+      "Circle": "Circle",
+      "Hollow Triangle": "Hollow Triangle",
+      "Human": "Human",
+      "Italic": "Italic",
+      "Numix": "Numix",
+      "Origami": "Origami",
+      "Spiral": "Spiral",
+      "Stepped Pyramid": "Stepped Pyramid",
+      "Wings": "Wings",
+      "Yaru": "Yaru"
+    }
+  },
+
+    "arrows_btn": {
+        "type": "button",
+        "description": "Replace arrow icons",
+        "callback": "btn_arrows_pressed"
+    },
+
+    "restore_btn": {
+        "type": "button",
+        "description": "Restore original icons",
+        "callback": "btn_restore_pressed"
+    }
+}
+
