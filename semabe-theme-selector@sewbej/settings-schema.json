@@ -231,7 +231,7 @@
 
   "arrows-style": {
     "type": "combobox",
-    "default": "breeze",
+    "default": "Breeze",
     "description": "Select arrow icons style",
     "options": {
       "Adwaita": "Adwaita",
