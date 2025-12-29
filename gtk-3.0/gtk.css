@@ -1123,7 +1123,7 @@ window > .titlebar:not(headerbar), window > .titlebar:not(headerbar):backdrop, w
     background-color: rgba(99, 99, 99, 0.25); }
   
   .primary-toolbar entry selection:focus, headerbar entry selection:focus {
-    background-color: alpha(@theme_color2, 0.705);
+    background-color: alpha(@theme_color, 0.405);
     color: #ffffff; }
   
   .primary-toolbar entry progress, headerbar entry progress {
@@ -3138,7 +3138,7 @@ textview text:selected,
 textview text:selected:focus, .view text selection:focus, .view text selection,
 textview text selection:focus,
 textview text selection {
-    background-color: alpha(@theme_color2, 0.79); }
+    background-color: alpha(@theme_color, 0.405); }
 iconview:selected, iconview:selected:focus, iconview text selection:focus, .view text selection, iconview text selection {
     box-shadow: 1px 1px 1px 1px mix(@theme_color2, @theme_color, 0.044) inset, -1px -1px 1px 1px mix(@theme_color2, @theme_color, 0.354) inset;
     background-color: alpha(@theme_color2, 0.18); }
