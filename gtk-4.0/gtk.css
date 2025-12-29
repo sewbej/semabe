@@ -3514,7 +3514,7 @@ tooltip.csd {
 .view:selected, .view:selected:focus, spinbutton:not(.vertical) selection:focus, spinbutton:not(.vertical) selection,
 textview > text:selected,
 textview > text:selected:focus, textview > text > selection:focus, textview > text > selection, iconview:selected, iconview:selected:focus {
-  background-color: alpha(@theme_color2, 0.67); }
+  background-color: alpha(@theme_color, 0.405); }
  flowbox > flowboxchild:selected, gridview > child:selected,
 entry > text > selection, spinbutton text > text > selection, columnview.view:selected, columnview.view:selected:focus,
 treeview.view:selected,
