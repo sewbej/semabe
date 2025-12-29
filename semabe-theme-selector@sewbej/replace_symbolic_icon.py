@@ -28,7 +28,6 @@ ARROW_FILES = [
     "pan-up-symbolic.svg",
 ]
 
-# only 4 shown in preview
 ARROW_PREVIEW_FILES = [
     "pan-down-symbolic.svg",
     "pan-end-symbolic.svg",
@@ -37,11 +36,10 @@ ARROW_PREVIEW_FILES = [
 ]
 
 BACKUP_SUFFIX = ".semabe.bak"
-
+XSI_PREFIX = "xsi-"
 
 def zenity_error(msg):
     subprocess.run(["zenity", "--error", "--title=Semabe Theme Selector", "--text", msg])
-
 
 def ensure_backup_once(target_file: Path):
     backup = Path(str(target_file) + BACKUP_SUFFIX)
@@ -52,7 +50,6 @@ def ensure_backup_once(target_file: Path):
         return True
     except Exception:
         return False
-
 
 def replace_many(source_dir: Path, target_dir: Path, names: list[str]):
     replaced = 0
@@ -70,14 +67,18 @@ def replace_many(source_dir: Path, target_dir: Path, names: list[str]):
                 ensure_backup_once(dest)
 
             try:
+                # Kopiowanie głównego pliku
                 shutil.copy2(src, dest)
+                
+                # TWORZENIE DUPLIKATU XSI-
+                xsi_dest = dest.parent / (XSI_PREFIX + dest.name)
+                shutil.copy2(src, xsi_dest)
+                
                 replaced += 1
-            except Exception:
-                pass
+            except Exception as e:
+                print(f"Błąd podczas kopiowania {name}: {e}")
 
     return replaced
-
-
 
 def restore_from_backups(target_dir: Path, names: list[str]):
     restored = 0
@@ -85,6 +86,14 @@ def restore_from_backups(target_dir: Path, names: list[str]):
         for dest in target_dir.rglob(name):
             if not dest.is_file():
                 continue
+            
+            xsi_file = dest.parent / (XSI_PREFIX + dest.name)
+            if xsi_file.exists():
+                try:
+                    xsi_file.unlink()
+                except Exception:
+                    pass
+
             backup = Path(str(dest) + BACKUP_SUFFIX)
             if backup.exists():
                 try:
@@ -94,7 +103,6 @@ def restore_from_backups(target_dir: Path, names: list[str]):
                 except Exception:
                     pass
     return restored
-
 
 # ------------------------------
 # GTK Animated Preview Dialog
@@ -108,7 +116,6 @@ class PreviewDialog(Gtk.Dialog):
         ok_label = "Restore" if "restore" in title.lower() else "Replace"
         self.add_button("         Cancel         ", Gtk.ResponseType.CANCEL)
         self.add_button(ok_label, Gtk.ResponseType.OK)
-
 
         label = Gtk.Label()
         extra = "" if "restore" in title.lower() else "\n\nwith the following icons:"
@@ -183,14 +190,11 @@ class PreviewDialog(Gtk.Dialog):
             GLib.idle_add(self._fade_out_and_close)
         return response
 
-
-
 def preview_icons(title, header, icons_dir, filenames, target_dir, show_icons=True):
     win = PreviewDialog(title, header, icons_dir, filenames, target_dir, show_icons)
     response = win.run()
     win.destroy()
     return response == Gtk.ResponseType.OK
-
 
 def ensure_local_copy(theme_name: str, icons_to_check: List[str], source_dir: Path) -> Path:
     home = Path.home()
@@ -258,13 +262,6 @@ def ensure_local_copy(theme_name: str, icons_to_check: List[str], source_dir: Pa
 
     return adwaita_dir if copied_any else None
 
-    if not copied_any:
-        print("⚙️ No matching SVGs in variant or base theme. Using Adwaita.")
-
-
-# ------------------------------
-# Main logic
-# ------------------------------
 def main():
     if len(sys.argv) < 4:
         zenity_error("Usage:\nreplace_symbolic_icon.py <mode> <style> <theme_dir>")
@@ -274,7 +271,6 @@ def main():
     home = Path.home()
     target_dir = home / ".local/share/icons" / target
 
-    # ---------------- TRYBY ----------------
     if mode == "controls":
         source_dir = home / f".themes/semabe/symbolic icons/close-minimize-maximize" / style
         all_names = CONTROLS_FILES
@@ -289,13 +285,13 @@ def main():
         header = "Replacing arrow icons in theme:"
     elif mode == "restore":
         source_dir = None
+        all_names = CONTROLS_FILES + ARROW_FILES
         title = "Restore original symbolic icons"
         header = "Restoring all original symbolic icons in theme:"
     else:
         zenity_error(f"Unknown mode: {mode}")
         sys.exit(1)
 
-    # ---------------- RESTORE ----------------
     if mode == "restore":
         confirmed = preview_icons(title, header, Path("."), [], target_dir, show_icons=False)
         if not confirmed:
@@ -303,7 +299,6 @@ def main():
             sys.exit(0)
 
         restored = 0
-
         if target_dir.exists():
             restored += restore_from_backups(target_dir, CONTROLS_FILES)
             restored += restore_from_backups(target_dir, ARROW_FILES)
@@ -315,6 +310,8 @@ def main():
                 for name in CONTROLS_FILES + ARROW_FILES:
                     for dest in adwaita_dir.rglob(name):
                         try:
+                            xsi_file = dest.parent / (XSI_PREFIX + dest.name)
+                            xsi_file.unlink(missing_ok=True)
                             dest.unlink(missing_ok=True)
                             removed += 1
                         except Exception:
@@ -327,19 +324,12 @@ def main():
             print(f"✅ Restored {restored} files.")
             sys.exit(0)
         else:
-            zenity_error(
-                "No backup files (.semabe.bak) found to restore,\n"
-            )
+            zenity_error("No backup files (.semabe.bak) found to restore.")
             sys.exit(1)
 
-    # ---------------- CONTROLS / ARROWS ----------------
     if not source_dir.exists():
         zenity_error(f"Source directory not found:\n{source_dir}")
         sys.exit(1)
-
-    missing = [str(source_dir / n) for n in all_names if not (source_dir / n).exists()]
-    if missing:
-        print("⚠️ Some source SVG files are missing. Adwaita may be used.")
 
     confirmed = preview_icons(title, header, source_dir, preview_names, target_dir)
     if not confirmed:
@@ -348,22 +338,18 @@ def main():
 
     alt = ensure_local_copy(target, all_names, source_dir)
     if alt is None:
-        zenity_error(
-            f"Icon theme '{target}' not found locally or in system,\n"
-            f"or contains no required SVG files."
-        )
+        zenity_error(f"Icon theme '{target}' not found or incompatible.")
         sys.exit(1)
+    
     target_dir = alt
-
     replaced = replace_many(source_dir, target_dir, all_names)
+    
     if replaced > 0:
-        print(f"✅ Replaced {replaced} files ({mode}, style='{style}').")
+        print(f"✅ Replaced {replaced} files.")
         sys.exit(0)
     else:
         zenity_error(f"No matching files found in:\n{target_dir}")
         sys.exit(1)
 
-
 if __name__ == "__main__":
     main()
-

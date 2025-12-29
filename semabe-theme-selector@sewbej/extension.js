@@ -21,24 +21,7 @@ class ThemeSelectorExtension {
         this.transparencyCinn = "Opaque";
         this.windowControlsCinn = "legacy";
 
-        this.settings = new Settings.ExtensionSettings(this, meta.uuid);
-        this.settings.bind("color", "color", this.onSettingsChanged.bind(this));
-        this.settings.bind("transparency", "transparency", this.onSettingsChanged.bind(this));
-        this.settings.bind("window-controls", "windowControls", this.onSettingsChanged.bind(this));
-        this.settings.bind("color-cinn", "colorCinn", this.onSettingsChanged.bind(this));
-        this.settings.bind("transparency-cinn", "transparencyCinn", this.onSettingsChanged.bind(this));
-        this.settings.bind("window-controls", "windowControlsCinn", this.onSettingsChanged.bind(this));
-        this.settings.bind("controls-style", "controlsstyle", this.onSettingsChanged.bind(this));
-        this.settings.bind("arrows-style", "arrowsstyle", this.onSettingsChanged.bind(this));
-       //this.settings.bind("directory-select", "targetDir", this.onSettingsChanged.bind(this));
 
-        this.settings.bind("size1", "size1", this.onSettingsChanged.bind(this));
-        this.settings.bind("size2", "size2", this.onSettingsChanged.bind(this));
-        this.settings.bind("size3", "size3", this.onSettingsChanged.bind(this));
-        this.settings.bind("size4", "size4", this.onSettingsChanged.bind(this));
-        this.settings.bind("size5", "size5", this.onSettingsChanged.bind(this));
-        this.settings.bind("size6", "size6", this.onSettingsChanged.bind(this));
-        this.settings.bind("size7", "size7", this.onSettingsChanged.bind(this));
 
         this.wmSettings = new Gio.Settings({ schema: "org.cinnamon.desktop.wm.preferences" });
         this.wmSettingsChangedId = null;
@@ -49,7 +32,25 @@ class ThemeSelectorExtension {
         Gettext.bindtextdomain(meta.uuid, GLib.get_home_dir() + "/.local/share/locale");
     }
 
-    enable() {
+enable() {
+    this.settings = new Settings.ExtensionSettings(this, this.meta.uuid);
+
+    this.settings.bind("color", "color", this.onSettingsChanged.bind(this));
+    this.settings.bind("transparency", "transparency", this.onSettingsChanged.bind(this));
+    this.settings.bind("window-controls", "windowControls", this.onSettingsChanged.bind(this));
+    this.settings.bind("color-cinn", "colorCinn", this.onSettingsChanged.bind(this));
+    this.settings.bind("transparency-cinn", "transparencyCinn", this.onSettingsChanged.bind(this));
+    this.settings.bind("window-controls", "windowControlsCinn", this.onSettingsChanged.bind(this));
+    this.settings.bind("controls-style", "controlsstyle", this.onSettingsChanged.bind(this));
+    this.settings.bind("arrows-style", "arrowsstyle", this.onSettingsChanged.bind(this));
+    this.settings.bind("size1", "size1", this.onSettingsChanged.bind(this));
+    this.settings.bind("size2", "size2", this.onSettingsChanged.bind(this));
+    this.settings.bind("size3", "size3", this.onSettingsChanged.bind(this));
+    this.settings.bind("size4", "size4", this.onSettingsChanged.bind(this));
+    this.settings.bind("size5", "size5", this.onSettingsChanged.bind(this));
+    this.settings.bind("size6", "size6", this.onSettingsChanged.bind(this));
+    this.settings.bind("size7", "size7", this.onSettingsChanged.bind(this));
+
         this._updateUnifiedSize();
     // Auto-detect targetDir if empty
     if (!this.targetDir || this.targetDir.trim() === "") {
@@ -324,17 +325,11 @@ class ThemeSelectorExtension {
 }
 
 function getCurrentIconTheme() {
-  try {
     const s = new Gio.Settings({ schema: ICON_SCHEMA });
     return s.get_string("icon-theme") || "";
-  } catch (e) {
-    global.logError(e);
-    return "";
-  }
 }
 
 function refreshIconTheme(targetDir) {
-  try {
     const command = `bash -c " \
       gsettings set org.cinnamon.desktop.interface icon-theme ''; \
       sleep 0.3; \
@@ -342,9 +337,6 @@ function refreshIconTheme(targetDir) {
     "`;
     Util.spawnCommandLine(command);
     global.log(`Icon theme refreshed: '${targetDir}'`);
-  } catch (e) {
-    global.logError(`Failed to refresh icon theme: ${e}`);
-  }
 }
 
 function runThemeScript(mode, style, targetDir) {
@@ -367,7 +359,6 @@ function runThemeScript(mode, style, targetDir) {
       return;
     }
 
-
     const proc = new Gio.Subprocess({
       argv: ["/usr/bin/python3", scriptPath, mode, style, targetDir],
       flags: Gio.SubprocessFlags.STDOUT_PIPE | Gio.SubprocessFlags.STDERR_PIPE,
@@ -389,12 +380,10 @@ function runThemeScript(mode, style, targetDir) {
         }
       } catch (e) {
         Main.notifyError("Semabe Theme Selector", `Exception: ${e.message}`);
-        global.logError(e);
       }
     });
   } catch (e) {
     Main.notifyError("Semabe Theme Selector", `Exception: ${e.message}`);
-    global.logError(e);
   }
 }
 
@@ -413,60 +402,30 @@ var Callbacks = {
 };
 
 
-function CubeSettings(uuid) {
-    this._init(uuid);
-}
-CubeSettings.prototype = {
-    _init: function(uuid) {
-        this.settings = new Settings.ExtensionSettings(this, uuid);
-    }
-};
-
-
 let extension = null;
-let cubeSettings = null;
 let signalManager = null;
 
 function init(metadata) {
     extension = new ThemeSelectorExtension(metadata);
-    cubeSettings = new CubeSettings(metadata.uuid);
     signalManager = new SignalManager.SignalManager(null);
 }
 
 function enable() {
-    try {
-        extension.enable();
-    } catch (err) {
-        try { extension.disable(); } catch (e) {}
-        throw err;
-    }
+    extension.enable();
+
     Object.keys(Callbacks).forEach(k => {
         Callbacks[k] = Callbacks[k].bind(extension);
     });
-
     return Callbacks;
 }
 
 function disable() {
-    try {
-        extension.disable();
-    } catch (err) {
-        global.logError(err);
-    }
-
-    try {
-        if (cubeSettings && cubeSettings.settings && typeof cubeSettings.settings.finalize === "function")
-            cubeSettings.settings.finalize();
-    } catch (e) {
-        global.logError(e);
-    }
-    cubeSettings = null;
+    extension.disable();
 
     if (signalManager && typeof signalManager.disconnectAllSignals === "function") {
         try { signalManager.disconnectAllSignals(); } catch (e) {}
     }
     signalManager = null;
-
     extension = null;
 }
 
