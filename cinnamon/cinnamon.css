@@ -17,7 +17,7 @@ stage {
 
 .prompt-dialog-password-entry,
 .run-dialog-entry,
-#menu-search-entry,
+#menu-search-entry, #appmenu-search-entry,
 .popup-menu #notification StEntry {
   padding: 7px;
   caret-size: 1px;
@@ -664,7 +664,7 @@ stage {
   background-color: transparent;
 }
 
-#menu-search-entry, .notification StEntry, .menu #notification StEntry, .popup-menu #notification StEntry, #notification StEntry {
+#menu-search-entry, .notification StEntry, .menu #notification StEntry, .popup-menu #notification StEntry, #notification StEntry, #appmenu-search-entry:focus {
   padding: 3px 12px;
   min-height: 24px;
   caret-size: 1px;
@@ -677,9 +677,9 @@ stage {
   background-color: rgba(255, 255, 255, 0.05);
 }
 
-#menu-search-entry:focus, .notification StEntry:focus, .menu #notification StEntry:focus, .popup-menu #notification StEntry:focus, #notification StEntry:focus, #menu-search-entry:hover, .notification StEntry:hover, .menu #notification StEntry:hover, .popup-menu #notification StEntry:hover, #notification StEntry:hover {
+#menu-search-entry:focus, .notification StEntry:focus, .menu #notification StEntry:focus, .popup-menu #notification StEntry:focus, #notification StEntry:focus, #menu-search-entry:hover, .notification StEntry:hover, .menu #notification StEntry:hover, .popup-menu #notification StEntry:hover, #notification StEntry:hover, #appmenu-search-entry:focus {
   color: white;
-  box-shadow: 2px 2px 3px 1px rgba(254, 254, 254, 0.35) inset;
+  box-shadow: 1px 1px 2px 1px rgba(254, 254, 254, 0.35) inset;
   border-color: rgba(10, 10, 10, 0.7);
   border-top: 1px;
   border-left: 1px;
@@ -871,7 +871,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   icon-size: 16px;
 }
 
-.menu .popup-sub-menu,
+.menu .popup-sub-menu, .appmenu-applications-box,
 .popup-menu .popup-sub-menu,
 .popup-combo-menu .popup-sub-menu {
   font-size: 0.88em;
@@ -915,7 +915,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   padding: 3px;
 }
 
-.menu .popup-menu-item,
+.menu .popup-menu-item, .appmenu-sidebar-button,
 .popup-menu .popup-menu-item,
 .popup-combo-menu .popup-menu-item {
   padding: 3px 6px;
@@ -929,7 +929,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   border-bottom: 2px;
 }
 
-.menu .popup-menu-item:hover, .menu .popup-menu-item:active,
+.menu .popup-menu-item:hover, .menu .popup-menu-item:active, .appmenu-sidebar-button:hover,
 .popup-menu .popup-menu-item:hover,
 .popup-menu .popup-menu-item:active,
 .popup-combo-menu .popup-menu-item:hover,
@@ -2067,7 +2067,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   -boxpointer-gap: 5px;
 }
 
-.menu-favorites-box {
+.menu-favorites-box, .appmenu-sidebar, .appmenu-system-button {
   margin: auto;
   margin-bottom: 6px;
   padding: 6px;
@@ -2154,7 +2154,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
  
 }
 
-.menu-application-button {
+.menu-application-button, .appmenu-application-button {
   padding: 6px;
   transition-duration: 0;
   border-radius: 8px;
@@ -2169,7 +2169,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   font-weight: bold;
 }
 
-.menu-application-button-selected {
+.menu-application-button-selected, .appmenu-application-button-selected {
   color: white;
   transition-duration: 0;
   padding: 6px;
@@ -2214,7 +2214,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   background-gradient-end: rgba(10, 10, 10, 0.19);
 }
 
-.menu-category-button {
+.menu-category-button, .appmenu-category-button, .appmenu-category-button-greyed {
   padding: 6px;
   transition-duration: 0;
   border-radius: 8px;
@@ -2229,7 +2229,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   padding: 6px;
 }
 
-.menu-category-button-hover, .menu-category-button-selected {
+.menu-category-button-hover, .menu-category-button-selected, .appmenu-category-button-selected, .appmenu-category-button:hover {
   color: white;
   transition-duration: 0;
   border-radius: 8px;
@@ -3085,4 +3085,132 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   border: 0px;
   background-color: rgba(10, 10, 10, 0);
   border-radius: 0px;
+}
+
+.appmenu-category-button,
+.appmenu-category-button:hover,
+.appmenu-category-button-selected,
+.appmenu-category-button-greyed,
+.appmenu-application-button,
+.appmenu-application-button-selected,
+.appmenu-sidebar-button {
+  font-size: 1.0em;
+  padding: 3px 6px;
+  spacing: 0;
+}
+.appmenu-sidebar-button {
+  padding: 2px 4px 2px 2px;
+  spacing: 0;
+}
+
+.appmenu-background .popup-menu-content {
+  padding: 0;
+}
+
+.appmenu-main-box {
+  spacing: 0;
+}
+
+.appmenu-right-box {
+  spacing: 0;
+  padding: 0;
+}
+
+.appmenu-categories-applications-box {
+  spacing: 6px;
+  padding: 0;
+}
+
+.appmenu-applications-box {
+  font-size: 1.0em;
+  margin: 0 4px 0 0;
+}
+
+.appmenu-search-box {
+  padding: 0;
+  spacing: 0;
+}
+.appmenu-system-box {
+  padding: 0 0 0 10px;
+  spacing: 10px;
+}
+.appmenu-sidebar .appmenu-system-box {
+  padding: 2px 4px;
+  spacing: 8px;
+}
+.appmenu-application-button-label {
+  font-size: 1.0em;
+  padding: 0 0 0 6px;
+}
+.appmenu-application-button-description {
+  font-weight: 400;
+  font-size: 0.818em;
+  padding: 0 0 0 6px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.appmenu-application-button:highlighted,
+.appmenu-application-button-selected:highlighted {
+  font-weight: bold;
+}
+
+.appmenu-category-button-label {
+  font-size: 0.92em;
+  padding: 0 0 0 4px;
+}
+
+.appmenu-category-button-greyed {
+  color: rgba(225, 225, 225, 0.4);
+}
+.appmenu-category-button-greyed StIcon {
+  opacity: 0.5;
+}
+
+.appmenu-search-entry-icon {
+  icon-size: 1em;
+}
+.appmenu-sidebar {
+  margin-bottom: 0;
+  margin-right: 6px;
+}
+
+.appmenu-sidebar .appmenu-system-button, .appmenu-system-button {
+  margin: 0;
+  box-shadow: 0.4px 0.8px 1.6px 0.4px rgba(255, 255, 255, 0.4) inset;
+  border-radius: 99px;
+  padding: 6px;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(254, 254, 254, 0.1);
+  background-gradient-end: rgba(254, 254, 254, 0.4);
+}
+.appmenu-sidebar .appmenu-system-button-lock:hover, .appmenu-system-button-lock:hover,
+.appmenu-sidebar .appmenu-system-button-logout:hover, .appmenu-system-button-logout:hover {
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(254, 254, 254, 0.1);
+  background-gradient-end: rgba(254, 254, 254, 0.3);
+}
+
+.appmenu-sidebar .appmenu-system-button-shutdown, .appmenu-system-button-shutdown {
+  background-gradient-direction: vertical;
+  background-gradient-start: #ba0913;
+  background-gradient-end: #f00c18;
+}
+.appmenu-sidebar .appmenu-system-button-shutdown:hover, .appmenu-system-button-shutdown:hover {
+  background-gradient-direction: vertical;
+  background-gradient-start: #aa0a14;
+  background-gradient-end: #d00c18;
+}
+
+.appmenu-sidebar .appmenu-system-button {
+  padding: 8px;
+}
+
+.appmenu-system-button-lock:hover, .appmenu-system-button-logout:hover, .appmenu-system-button-shutdown:hover {
+  box-shadow:0.4px 0.8px 1.6px 0.8px rgba(255, 255, 255, 0.2) inset;
+  border-top:1px;
+  border-left:1px;
+  border-right:1px;
+  border-bottom:1px;
+  margin-top:1px;
+  margin-left:1px;
 }
