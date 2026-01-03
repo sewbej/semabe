@@ -3001,12 +3001,21 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .user-icon {
-  width: 32px;
-  height: 32px;
-  background-color: transparent;
-  border: none;
-  border-radius: 0;
-}
+  background-size: contain;
+  border-radius: 8px;
+  color: #e1e1e1;
+  border-color: transparent; }
+  .user-icon StIcon {
+    border: 1px solid transparent;
+    border-radius: 8px;
+    padding: 14px; }
+  .user-icon StIcon.highlighted {
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    padding: 14px; }
+  .user-icon.user-avatar {
+    border: 1px solid transparent;
+    border-radius: 8px; }
 
 .user-label {
   color: white;
