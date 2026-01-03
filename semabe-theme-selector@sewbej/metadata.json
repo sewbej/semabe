@@ -3,7 +3,7 @@
   "name": "Semabe Theme Selector",
   "description": "Selects semabe themes.",
   "url": "https://github.com/sewbej/semabe",
-  "version": "3.5",
+  "version": "3.5.1",
   "author": "sewbej",
   "icon": "preferences-desktop-theme",
   "cinnamon-version": ["6.4", "6.6"]

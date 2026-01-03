@@ -21,13 +21,10 @@ class ThemeSelectorExtension {
         this.transparencyCinn = "Opaque";
         this.windowControlsCinn = "legacy";
 
-
-
         this.wmSettings = new Gio.Settings({ schema: "org.cinnamon.desktop.wm.preferences" });
         this.wmSettingsChangedId = null;
         this.interfaceSettings = new Gio.Settings({ schema: ICON_SCHEMA });
         this.iconThemeChangedId = null;
-
 
         Gettext.bindtextdomain(meta.uuid, GLib.get_home_dir() + "/.local/share/locale");
     }
