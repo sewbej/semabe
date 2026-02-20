@@ -1704,7 +1704,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   spacing-rows: 9px;
   spacing-columns: 9px;
   margin-from-right-edge-of-screen: 18px;
-  width: 28em;
+  width: 34em;
   color: white;
   background-gradient-direction: vertical;
   background-gradient-start: rgba(103, 103, 103, 1);
@@ -1712,7 +1712,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   box-shadow: 0px 0px 7px 5px rgba(10, 10, 10, 0.59);
   border-color: rgba(10, 10, 10, 0.9);
   border: 1px;
-  margin: 7px 12px 17px 12px;
+  margin: 6px
 }
 
 #notification .notification-button, #notification .notification-icon-button {
@@ -2518,7 +2518,9 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .grouped-window-list-thumbnail-menu {
-  padding: 4px;
+  padding: 0;
+  border-radius: 12px;
+  margin: 0;
 }
 
 .grouped-window-list-thumbnail-menu .item-box {
