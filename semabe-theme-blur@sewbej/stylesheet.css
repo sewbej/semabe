@@ -1,0 +1,1777 @@
+/* glass pane azure */
+.menu.semabe-blur-popup-pane-azure,
+.menu-favorites-box.popup-sub-menu.semabe-blur-popup-pane-azure,
+.semabe-blur-popup-pane-azure .grouped-window-list-thumbnail-menu .item-box,
+.semabe-blur-notification-pane-azure #notification {
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(71, 163, 255, 0.051) !important;
+  background-gradient-end: rgba(71, 163, 255, 0.051) !important;
+  box-shadow: 2px 2px 4px 1px rgba(71, 163, 255, 0.3) inset;
+  border-color: rgba(0, 5, 23, 0.4);
+  border-top: 1px;
+  border-left: 1px;
+  border-right: 2px;
+  border-bottom: 2px;
+}
+.menu.semabe-blur-popup-pane-azure .popup-sub-menu,
+.semabe-blur-popup-pane-azure .appmenu-applications-box,
+.semabe-blur-popup-pane-azure .popup-menu .popup-sub-menu,
+.semabe-blur-popup-pane-azure .popup-combo-menu .popup-sub-menu {
+  font-size: 0.88em;
+  padding: 0 1px 1px 0;
+  color: white;
+  border-radius: 8px;
+  box-shadow: -2px -2px 1.2px 0px rgba(71, 163, 255, 0.3) inset;
+  border-color: rgba(0, 5, 23, 0.4);
+  border-top: 2px;
+  border-left: 2px;
+  border-right: 0;
+  border-bottom: 0;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(0, 5, 23, 0.19);
+  background-gradient-end: rgba(0, 5, 23, 0.19);
+}
+.semabe-blur-popup-pane-azure .menu-favorites-box,
+.semabe-blur-popup-pane-azure .calendar,
+.semabe-blur-popup-pane-azure .appmenu-sidebar {
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(71, 163, 255, 0.2) !important;
+  background-gradient-end: rgba(71, 163, 255, 0.2) !important;
+  box-shadow: 2px 2px 4px 1px rgba(71, 163, 255, 0.3) inset;
+  border-color: rgba(0, 5, 23, 0.4);
+  border-top: 1px;
+  border-left: 1px;
+  border-right: 2px;
+  border-bottom: 2px;
+}
+.semabe-blur-popup-pane-azure .grouped-window-list-thumbnail-menu .item-box,
+.semabe-blur-notification-pane-azure #notification {
+  margin: 0;
+}
+.menu.semabe-blur-popup-pane-azure .popup-menu-item:hover,
+.menu.semabe-blur-popup-pane-azure .popup-menu-item:active,
+.popup-menu.semabe-blur-popup-pane-azure .popup-menu-item:hover,
+.popup-menu.semabe-blur-popup-pane-azure .popup-menu-item:active,
+.popup-combo-menu.semabe-blur-popup-pane-azure .popup-menu-item:hover,
+.popup-combo-menu.semabe-blur-popup-pane-azure .popup-menu-item:active,
+.popup-combo-menu.semabe-blur-popup-pane-azure .popup-menu-item:hover,
+.popup-combo-menu.semabe-blur-popup-pane-azure .popup-menu-item:active,
+.menu.semabe-blur-popup-pane-azure .menu-favorites-button:hover,
+.menu.semabe-blur-popup-pane-azure .menu-application-button:hover,
+.menu.semabe-blur-popup-pane-azure .appmenu-application-button:hover,
+.menu.semabe-blur-popup-pane-azure .menu-application-button-selected,
+.menu.semabe-blur-popup-pane-azure .appmenu-application-button-selected,
+.menu.semabe-blur-popup-pane-azure .menu-category-button-hover,
+.menu.semabe-blur-popup-pane-azure .menu-category-button-selected,
+.menu.semabe-blur-popup-pane-azure .appmenu-category-button-selected,
+.menu.semabe-blur-popup-pane-azure .appmenu-category-button:hover,
+.menu.semabe-blur-popup-pane-azure .appmenu-sidebar-button:hover,
+.appmenu-sidebar.semabe-blur-popup-pane-azure .appmenu-sidebar-button:hover {
+  box-shadow: 1.6px 1.6px 2px 1px rgba(71, 163, 255, 0.2) inset;
+  border-color: rgba(0, 5, 23, 0.4);
+  border-top: 1px;
+  border-left: 1px;
+  border-right: 2px;
+  border-bottom: 2px;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(71, 163, 255, 0.3) !important;
+  background-gradient-end: rgba(0, 5, 23, 0.3) !important;
+}
+
+/* glass pane cinnamon */
+.menu.semabe-blur-popup-pane-cinnamon,
+.menu-favorites-box.popup-sub-menu.semabe-blur-popup-pane-cinnamon,
+.semabe-blur-popup-pane-cinnamon .grouped-window-list-thumbnail-menu .item-box,
+.semabe-blur-notification-pane-cinnamon #notification {
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255, 102, 25, 0.051) !important;
+  background-gradient-end: rgba(255, 102, 25, 0.051) !important;
+  box-shadow: 2px 2px 4px 1px rgba(255, 102, 25, 0.3) inset;
+  border-color: rgba(15, 5, 0, 0.4);
+  border-top: 1px;
+  border-left: 1px;
+  border-right: 2px;
+  border-bottom: 2px;
+}
+.menu.semabe-blur-popup-pane-cinnamon .popup-sub-menu,
+.semabe-blur-popup-pane-cinnamon .appmenu-applications-box,
+.semabe-blur-popup-pane-cinnamon .popup-menu .popup-sub-menu,
+.semabe-blur-popup-pane-cinnamon .popup-combo-menu .popup-sub-menu {
+  font-size: 0.88em;
+  padding: 0 1px 1px 0;
+  color: white;
+  border-radius: 8px;
+  box-shadow: -2px -2px 1.2px 0px rgba(255, 102, 25, 0.3) inset;
+  border-color: rgba(15, 5, 0, 0.4);
+  border-top: 2px;
+  border-left: 2px;
+  border-right: 0;
+  border-bottom: 0;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(15, 5, 0, 0.19);
+  background-gradient-end: rgba(15, 5, 0, 0.19);
+}
+.semabe-blur-popup-pane-cinnamon .menu-favorites-box,
+.semabe-blur-popup-pane-cinnamon .calendar,
+.semabe-blur-popup-pane-cinnamon .appmenu-sidebar {
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255, 102, 25, 0.2) !important;
+  background-gradient-end: rgba(255, 102, 25, 0.2) !important;
+  box-shadow: 2px 2px 4px 1px rgba(255, 102, 25, 0.3) inset;
+  border-color: rgba(15, 5, 0, 0.4);
+  border-top: 1px;
+  border-left: 1px;
+  border-right: 2px;
+  border-bottom: 2px;
+}
+.semabe-blur-popup-pane-cinnamon .grouped-window-list-thumbnail-menu .item-box,
+.semabe-blur-notification-pane-cinnamon #notification {
+  margin: 0;
+}
+.menu.semabe-blur-popup-pane-cinnamon .popup-menu-item:hover,
+.menu.semabe-blur-popup-pane-cinnamon .popup-menu-item:active,
+.popup-menu.semabe-blur-popup-pane-cinnamon .popup-menu-item:hover,
+.popup-menu.semabe-blur-popup-pane-cinnamon .popup-menu-item:active,
+.popup-combo-menu.semabe-blur-popup-pane-cinnamon .popup-menu-item:hover,
+.popup-combo-menu.semabe-blur-popup-pane-cinnamon .popup-menu-item:active,
+.popup-combo-menu.semabe-blur-popup-pane-cinnamon .popup-menu-item:hover,
+.popup-combo-menu.semabe-blur-popup-pane-cinnamon .popup-menu-item:active,
+.menu.semabe-blur-popup-pane-cinnamon .menu-favorites-button:hover,
+.menu.semabe-blur-popup-pane-cinnamon .menu-application-button:hover,
+.menu.semabe-blur-popup-pane-cinnamon .appmenu-application-button:hover,
+.menu.semabe-blur-popup-pane-cinnamon .menu-application-button-selected,
+.menu.semabe-blur-popup-pane-cinnamon .appmenu-application-button-selected,
+.menu.semabe-blur-popup-pane-cinnamon .menu-category-button-hover,
+.menu.semabe-blur-popup-pane-cinnamon .menu-category-button-selected,
+.menu.semabe-blur-popup-pane-cinnamon .appmenu-category-button-selected,
+.menu.semabe-blur-popup-pane-cinnamon .appmenu-category-button:hover,
+.menu.semabe-blur-popup-pane-cinnamon .appmenu-sidebar-button:hover,
+.appmenu-sidebar.semabe-blur-popup-pane-cinnamon .appmenu-sidebar-button:hover {
+  box-shadow: 1.6px 1.6px 2px 1px rgba(255, 102, 25, 0.2) inset;
+  border-color: rgba(15, 5, 0, 0.4);
+  border-top: 1px;
+  border-left: 1px;
+  border-right: 2px;
+  border-bottom: 2px;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255, 102, 25, 0.3) !important;
+  background-gradient-end: rgba(15, 5, 0, 0.3) !important;
+}
+
+/* glass pane crimson */
+.menu.semabe-blur-popup-pane-crimson,
+.menu-favorites-box.popup-sub-menu.semabe-blur-popup-pane-crimson,
+.semabe-blur-popup-pane-crimson .grouped-window-list-thumbnail-menu .item-box,
+.semabe-blur-notification-pane-crimson #notification {
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255, 87, 129, 0.051) !important;
+  background-gradient-end: rgba(255, 87, 129, 0.051) !important;
+  box-shadow: 2px 2px 4px 1px rgba(255, 87, 129, 0.3) inset;
+  border-color: rgba(13, 0, 3, 0.4);
+  border-top: 1px;
+  border-left: 1px;
+  border-right: 2px;
+  border-bottom: 2px;
+}
+.menu.semabe-blur-popup-pane-crimson .popup-sub-menu,
+.semabe-blur-popup-pane-crimson .appmenu-applications-box,
+.semabe-blur-popup-pane-crimson .popup-menu .popup-sub-menu,
+.semabe-blur-popup-pane-crimson .popup-combo-menu .popup-sub-menu {
+  font-size: 0.88em;
+  padding: 0 1px 1px 0;
+  color: white;
+  border-radius: 8px;
+  box-shadow: -2px -2px 1.2px 0px rgba(255, 87, 129, 0.3) inset;
+  border-color: rgba(13, 0, 3, 0.4);
+  border-top: 2px;
+  border-left: 2px;
+  border-right: 0;
+  border-bottom: 0;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(13, 0, 3, 0.19);
+  background-gradient-end: rgba(13, 0, 3, 0.19);
+}
+.semabe-blur-popup-pane-crimson .menu-favorites-box,
+.semabe-blur-popup-pane-crimson .calendar,
+.semabe-blur-popup-pane-crimson .appmenu-sidebar {
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255, 87, 129, 0.2) !important;
+  background-gradient-end: rgba(255, 87, 129, 0.2) !important;
+  box-shadow: 2px 2px 4px 1px rgba(255, 87, 129, 0.3) inset;
+  border-color: rgba(13, 0, 3, 0.4);
+  border-top: 1px;
+  border-left: 1px;
+  border-right: 2px;
+  border-bottom: 2px;
+}
+.semabe-blur-popup-pane-crimson .grouped-window-list-thumbnail-menu .item-box,
+.semabe-blur-notification-pane-crimson #notification {
+  margin: 0;
+}
+.menu.semabe-blur-popup-pane-crimson .popup-menu-item:hover,
+.menu.semabe-blur-popup-pane-crimson .popup-menu-item:active,
+.popup-menu.semabe-blur-popup-pane-crimson .popup-menu-item:hover,
+.popup-menu.semabe-blur-popup-pane-crimson .popup-menu-item:active,
+.popup-combo-menu.semabe-blur-popup-pane-crimson .popup-menu-item:hover,
+.popup-combo-menu.semabe-blur-popup-pane-crimson .popup-menu-item:active,
+.popup-combo-menu.semabe-blur-popup-pane-crimson .popup-menu-item:hover,
+.popup-combo-menu.semabe-blur-popup-pane-crimson .popup-menu-item:active,
+.menu.semabe-blur-popup-pane-crimson .menu-favorites-button:hover,
+.menu.semabe-blur-popup-pane-crimson .menu-application-button:hover,
+.menu.semabe-blur-popup-pane-crimson .appmenu-application-button:hover,
+.menu.semabe-blur-popup-pane-crimson .menu-application-button-selected,
+.menu.semabe-blur-popup-pane-crimson .appmenu-application-button-selected,
+.menu.semabe-blur-popup-pane-crimson .menu-category-button-hover,
+.menu.semabe-blur-popup-pane-crimson .menu-category-button-selected,
+.menu.semabe-blur-popup-pane-crimson .appmenu-category-button-selected,
+.menu.semabe-blur-popup-pane-crimson .appmenu-category-button:hover,
+.menu.semabe-blur-popup-pane-crimson .appmenu-sidebar-button:hover,
+.appmenu-sidebar.semabe-blur-popup-pane-crimson .appmenu-sidebar-button:hover {
+  box-shadow: 1.6px 1.6px 2px 1px rgba(255, 87, 129, 0.2) inset;
+  border-color: rgba(13, 0, 3, 0.4);
+  border-top: 1px;
+  border-left: 1px;
+  border-right: 2px;
+  border-bottom: 2px;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255, 87, 129, 0.3) !important;
+  background-gradient-end: rgba(13, 0, 3, 0.3) !important;
+}
+
+/* glass pane falcon */
+.menu.semabe-blur-popup-pane-falcon,
+.menu-favorites-box.popup-sub-menu.semabe-blur-popup-pane-falcon,
+.semabe-blur-popup-pane-falcon .grouped-window-list-thumbnail-menu .item-box,
+.semabe-blur-notification-pane-falcon #notification {
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255, 199, 219, 0.051) !important;
+  background-gradient-end: rgba(255, 199, 219, 0.051) !important;
+  box-shadow: 2px 2px 4px 1px rgba(255, 199, 219, 0.3) inset;
+  border-color: rgba(13, 4, 7, 0.4);
+  border-top: 1px;
+  border-left: 1px;
+  border-right: 2px;
+  border-bottom: 2px;
+}
+.menu.semabe-blur-popup-pane-falcon .popup-sub-menu,
+.semabe-blur-popup-pane-falcon .appmenu-applications-box,
+.semabe-blur-popup-pane-falcon .popup-menu .popup-sub-menu,
+.semabe-blur-popup-pane-falcon .popup-combo-menu .popup-sub-menu {
+  font-size: 0.88em;
+  padding: 0 1px 1px 0;
+  color: white;
+  border-radius: 8px;
+  box-shadow: -2px -2px 1.2px 0px rgba(255, 199, 219, 0.3) inset;
+  border-color: rgba(13, 4, 7, 0.4);
+  border-top: 2px;
+  border-left: 2px;
+  border-right: 0;
+  border-bottom: 0;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(13, 4, 7, 0.19);
+  background-gradient-end: rgba(13, 4, 7, 0.19);
+}
+.semabe-blur-popup-pane-falcon .menu-favorites-box,
+.semabe-blur-popup-pane-falcon .calendar,
+.semabe-blur-popup-pane-falcon .appmenu-sidebar {
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255, 199, 219, 0.2) !important;
+  background-gradient-end: rgba(255, 199, 219, 0.2) !important;
+  box-shadow: 2px 2px 4px 1px rgba(255, 199, 219, 0.3) inset;
+  border-color: rgba(13, 4, 7, 0.4);
+  border-top: 1px;
+  border-left: 1px;
+  border-right: 2px;
+  border-bottom: 2px;
+}
+.semabe-blur-popup-pane-falcon .grouped-window-list-thumbnail-menu .item-box,
+.semabe-blur-notification-pane-falcon #notification {
+  margin: 0;
+}
+.menu.semabe-blur-popup-pane-falcon .popup-menu-item:hover,
+.menu.semabe-blur-popup-pane-falcon .popup-menu-item:active,
+.popup-menu.semabe-blur-popup-pane-falcon .popup-menu-item:hover,
+.popup-menu.semabe-blur-popup-pane-falcon .popup-menu-item:active,
+.popup-combo-menu.semabe-blur-popup-pane-falcon .popup-menu-item:hover,
+.popup-combo-menu.semabe-blur-popup-pane-falcon .popup-menu-item:active,
+.popup-combo-menu.semabe-blur-popup-pane-falcon .popup-menu-item:hover,
+.popup-combo-menu.semabe-blur-popup-pane-falcon .popup-menu-item:active,
+.menu.semabe-blur-popup-pane-falcon .menu-favorites-button:hover,
+.menu.semabe-blur-popup-pane-falcon .menu-application-button:hover,
+.menu.semabe-blur-popup-pane-falcon .appmenu-application-button:hover,
+.menu.semabe-blur-popup-pane-falcon .menu-application-button-selected,
+.menu.semabe-blur-popup-pane-falcon .appmenu-application-button-selected,
+.menu.semabe-blur-popup-pane-falcon .menu-category-button-hover,
+.menu.semabe-blur-popup-pane-falcon .menu-category-button-selected,
+.menu.semabe-blur-popup-pane-falcon .appmenu-category-button-selected,
+.menu.semabe-blur-popup-pane-falcon .appmenu-category-button:hover,
+.menu.semabe-blur-popup-pane-falcon .appmenu-sidebar-button:hover,
+.appmenu-sidebar.semabe-blur-popup-pane-falcon .appmenu-sidebar-button:hover {
+  box-shadow: 1.6px 1.6px 2px 1px rgba(255, 199, 219, 0.2) inset;
+  border-color: rgba(13, 4, 7, 0.4);
+  border-top: 1px;
+  border-left: 1px;
+  border-right: 2px;
+  border-bottom: 2px;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255, 199, 219, 0.3) !important;
+  background-gradient-end: rgba(13, 4, 7, 0.3) !important;
+}
+
+/* glass pane grey */
+.menu.semabe-blur-popup-pane-grey,
+.menu-favorites-box.popup-sub-menu.semabe-blur-popup-pane-grey,
+.semabe-blur-popup-pane-grey .grouped-window-list-thumbnail-menu .item-box,
+.semabe-blur-notification-pane-grey #notification {
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(254, 254, 254, 0.051) !important;
+  background-gradient-end: rgba(254, 254, 254, 0.051) !important;
+  box-shadow: 2px 2px 4px 1px rgba(254, 254, 254, 0.3) inset;
+  border-color: rgba(10, 10, 10, 0.4);
+  border-top: 1px;
+  border-left: 1px;
+  border-right: 2px;
+  border-bottom: 2px;
+}
+.menu.semabe-blur-popup-pane-grey .popup-sub-menu,
+.semabe-blur-popup-pane-grey .appmenu-applications-box,
+.semabe-blur-popup-pane-grey .popup-menu .popup-sub-menu,
+.semabe-blur-popup-pane-grey .popup-combo-menu .popup-sub-menu {
+  font-size: 0.88em;
+  padding: 0 1px 1px 0;
+  color: white;
+  border-radius: 8px;
+  box-shadow: -2px -2px 1.2px 0px rgba(254, 254, 254, 0.3) inset;
+  border-color: rgba(10, 10, 10, 0.4);
+  border-top: 2px;
+  border-left: 2px;
+  border-right: 0;
+  border-bottom: 0;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(10, 10, 10, 0.19);
+  background-gradient-end: rgba(10, 10, 10, 0.19);
+}
+.semabe-blur-popup-pane-grey .menu-favorites-box,
+.semabe-blur-popup-pane-grey .calendar,
+.semabe-blur-popup-pane-grey .appmenu-sidebar {
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(254, 254, 254, 0.2) !important;
+  background-gradient-end: rgba(254, 254, 254, 0.2) !important;
+  box-shadow: 2px 2px 4px 1px rgba(254, 254, 254, 0.3) inset;
+  border-color: rgba(10, 10, 10, 0.4);
+  border-top: 1px;
+  border-left: 1px;
+  border-right: 2px;
+  border-bottom: 2px;
+}
+.semabe-blur-popup-pane-grey .grouped-window-list-thumbnail-menu .item-box,
+.semabe-blur-notification-pane-grey #notification {
+  margin: 0;
+}
+.menu.semabe-blur-popup-pane-grey .popup-menu-item:hover,
+.menu.semabe-blur-popup-pane-grey .popup-menu-item:active,
+.popup-menu.semabe-blur-popup-pane-grey .popup-menu-item:hover,
+.popup-menu.semabe-blur-popup-pane-grey .popup-menu-item:active,
+.popup-combo-menu.semabe-blur-popup-pane-grey .popup-menu-item:hover,
+.popup-combo-menu.semabe-blur-popup-pane-grey .popup-menu-item:active,
+.popup-combo-menu.semabe-blur-popup-pane-grey .popup-menu-item:hover,
+.popup-combo-menu.semabe-blur-popup-pane-grey .popup-menu-item:active,
+.menu.semabe-blur-popup-pane-grey .menu-favorites-button:hover,
+.menu.semabe-blur-popup-pane-grey .menu-application-button:hover,
+.menu.semabe-blur-popup-pane-grey .appmenu-application-button:hover,
+.menu.semabe-blur-popup-pane-grey .menu-application-button-selected,
+.menu.semabe-blur-popup-pane-grey .appmenu-application-button-selected,
+.menu.semabe-blur-popup-pane-grey .menu-category-button-hover,
+.menu.semabe-blur-popup-pane-grey .menu-category-button-selected,
+.menu.semabe-blur-popup-pane-grey .appmenu-category-button-selected,
+.menu.semabe-blur-popup-pane-grey .appmenu-category-button:hover,
+.menu.semabe-blur-popup-pane-grey .appmenu-sidebar-button:hover,
+.appmenu-sidebar.semabe-blur-popup-pane-grey .appmenu-sidebar-button:hover {
+  box-shadow: 1.6px 1.6px 2px 1px rgba(254, 254, 254, 0.2) inset;
+  border-color: rgba(10, 10, 10, 0.4);
+  border-top: 1px;
+  border-left: 1px;
+  border-right: 2px;
+  border-bottom: 2px;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(254, 254, 254, 0.3) !important;
+  background-gradient-end: rgba(10, 10, 10, 0.3) !important;
+}
+
+/* glass pane mint */
+.menu.semabe-blur-popup-pane-mint,
+.menu-favorites-box.popup-sub-menu.semabe-blur-popup-pane-mint,
+.semabe-blur-popup-pane-mint .grouped-window-list-thumbnail-menu .item-box,
+.semabe-blur-notification-pane-mint #notification {
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(76, 255, 160, 0.051) !important;
+  background-gradient-end: rgba(76, 255, 160, 0.051) !important;
+  box-shadow: 2px 2px 4px 1px rgba(76, 255, 160, 0.3) inset;
+  border-color: rgba(0, 13, 6, 0.4);
+  border-top: 1px;
+  border-left: 1px;
+  border-right: 2px;
+  border-bottom: 2px;
+}
+.menu.semabe-blur-popup-pane-mint .popup-sub-menu,
+.semabe-blur-popup-pane-mint .appmenu-applications-box,
+.semabe-blur-popup-pane-mint .popup-menu .popup-sub-menu,
+.semabe-blur-popup-pane-mint .popup-combo-menu .popup-sub-menu {
+  font-size: 0.88em;
+  padding: 0 1px 1px 0;
+  color: white;
+  border-radius: 8px;
+  box-shadow: -2px -2px 1.2px 0px rgba(76, 255, 160, 0.3) inset;
+  border-color: rgba(0, 13, 6, 0.4);
+  border-top: 2px;
+  border-left: 2px;
+  border-right: 0;
+  border-bottom: 0;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(0, 13, 6, 0.19);
+  background-gradient-end: rgba(0, 13, 6, 0.19);
+}
+.semabe-blur-popup-pane-mint .menu-favorites-box,
+.semabe-blur-popup-pane-mint .calendar,
+.semabe-blur-popup-pane-mint .appmenu-sidebar {
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(76, 255, 160, 0.2) !important;
+  background-gradient-end: rgba(76, 255, 160, 0.2) !important;
+  box-shadow: 2px 2px 4px 1px rgba(76, 255, 160, 0.3) inset;
+  border-color: rgba(0, 13, 6, 0.4);
+  border-top: 1px;
+  border-left: 1px;
+  border-right: 2px;
+  border-bottom: 2px;
+}
+.semabe-blur-popup-pane-mint .grouped-window-list-thumbnail-menu .item-box,
+.semabe-blur-notification-pane-mint #notification {
+  margin: 0;
+}
+.menu.semabe-blur-popup-pane-mint .popup-menu-item:hover,
+.menu.semabe-blur-popup-pane-mint .popup-menu-item:active,
+.popup-menu.semabe-blur-popup-pane-mint .popup-menu-item:hover,
+.popup-menu.semabe-blur-popup-pane-mint .popup-menu-item:active,
+.popup-combo-menu.semabe-blur-popup-pane-mint .popup-menu-item:hover,
+.popup-combo-menu.semabe-blur-popup-pane-mint .popup-menu-item:active,
+.popup-combo-menu.semabe-blur-popup-pane-mint .popup-menu-item:hover,
+.popup-combo-menu.semabe-blur-popup-pane-mint .popup-menu-item:active,
+.menu.semabe-blur-popup-pane-mint .menu-favorites-button:hover,
+.menu.semabe-blur-popup-pane-mint .menu-application-button:hover,
+.menu.semabe-blur-popup-pane-mint .appmenu-application-button:hover,
+.menu.semabe-blur-popup-pane-mint .menu-application-button-selected,
+.menu.semabe-blur-popup-pane-mint .appmenu-application-button-selected,
+.menu.semabe-blur-popup-pane-mint .menu-category-button-hover,
+.menu.semabe-blur-popup-pane-mint .menu-category-button-selected,
+.menu.semabe-blur-popup-pane-mint .appmenu-category-button-selected,
+.menu.semabe-blur-popup-pane-mint .appmenu-category-button:hover,
+.menu.semabe-blur-popup-pane-mint .appmenu-sidebar-button:hover,
+.appmenu-sidebar.semabe-blur-popup-pane-mint .appmenu-sidebar-button:hover {
+  box-shadow: 1.6px 1.6px 2px 1px rgba(76, 255, 160, 0.2) inset;
+  border-color: rgba(0, 13, 6, 0.4);
+  border-top: 1px;
+  border-left: 1px;
+  border-right: 2px;
+  border-bottom: 2px;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(76, 255, 160, 0.3) !important;
+  background-gradient-end: rgba(0, 13, 6, 0.3) !important;
+}
+
+/* glass pane nordic */
+.menu.semabe-blur-popup-pane-nordic,
+.menu-favorites-box.popup-sub-menu.semabe-blur-popup-pane-nordic,
+.semabe-blur-popup-pane-nordic .grouped-window-list-thumbnail-menu .item-box,
+.semabe-blur-notification-pane-nordic #notification {
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(184, 205, 255, 0.051) !important;
+  background-gradient-end: rgba(184, 205, 255, 0.051) !important;
+  box-shadow: 2px 2px 4px 1px rgba(184, 205, 255, 0.3) inset;
+  border-color: rgba(4, 7, 15, 0.4);
+  border-top: 1px;
+  border-left: 1px;
+  border-right: 2px;
+  border-bottom: 2px;
+}
+.menu.semabe-blur-popup-pane-nordic .popup-sub-menu,
+.semabe-blur-popup-pane-nordic .appmenu-applications-box,
+.semabe-blur-popup-pane-nordic .popup-menu .popup-sub-menu,
+.semabe-blur-popup-pane-nordic .popup-combo-menu .popup-sub-menu {
+  font-size: 0.88em;
+  padding: 0 1px 1px 0;
+  color: white;
+  border-radius: 8px;
+  box-shadow: -2px -2px 1.2px 0px rgba(184, 205, 255, 0.3) inset;
+  border-color: rgba(4, 7, 15, 0.4);
+  border-top: 2px;
+  border-left: 2px;
+  border-right: 0;
+  border-bottom: 0;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(4, 7, 15, 0.19);
+  background-gradient-end: rgba(4, 7, 15, 0.19);
+}
+.semabe-blur-popup-pane-nordic .menu-favorites-box,
+.semabe-blur-popup-pane-nordic .calendar,
+.semabe-blur-popup-pane-nordic .appmenu-sidebar {
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(184, 205, 255, 0.2) !important;
+  background-gradient-end: rgba(184, 205, 255, 0.2) !important;
+  box-shadow: 2px 2px 4px 1px rgba(184, 205, 255, 0.3) inset;
+  border-color: rgba(4, 7, 15, 0.4);
+  border-top: 1px;
+  border-left: 1px;
+  border-right: 2px;
+  border-bottom: 2px;
+}
+.semabe-blur-popup-pane-nordic .grouped-window-list-thumbnail-menu .item-box,
+.semabe-blur-notification-pane-nordic #notification {
+  margin: 0;
+}
+.menu.semabe-blur-popup-pane-nordic .popup-menu-item:hover,
+.menu.semabe-blur-popup-pane-nordic .popup-menu-item:active,
+.popup-menu.semabe-blur-popup-pane-nordic .popup-menu-item:hover,
+.popup-menu.semabe-blur-popup-pane-nordic .popup-menu-item:active,
+.popup-combo-menu.semabe-blur-popup-pane-nordic .popup-menu-item:hover,
+.popup-combo-menu.semabe-blur-popup-pane-nordic .popup-menu-item:active,
+.popup-combo-menu.semabe-blur-popup-pane-nordic .popup-menu-item:hover,
+.popup-combo-menu.semabe-blur-popup-pane-nordic .popup-menu-item:active,
+.menu.semabe-blur-popup-pane-nordic .menu-favorites-button:hover,
+.menu.semabe-blur-popup-pane-nordic .menu-application-button:hover,
+.menu.semabe-blur-popup-pane-nordic .appmenu-application-button:hover,
+.menu.semabe-blur-popup-pane-nordic .menu-application-button-selected,
+.menu.semabe-blur-popup-pane-nordic .appmenu-application-button-selected,
+.menu.semabe-blur-popup-pane-nordic .menu-category-button-hover,
+.menu.semabe-blur-popup-pane-nordic .menu-category-button-selected,
+.menu.semabe-blur-popup-pane-nordic .appmenu-category-button-selected,
+.menu.semabe-blur-popup-pane-nordic .appmenu-category-button:hover,
+.menu.semabe-blur-popup-pane-nordic .appmenu-sidebar-button:hover,
+.appmenu-sidebar.semabe-blur-popup-pane-nordic .appmenu-sidebar-button:hover {
+  box-shadow: 1.6px 1.6px 2px 1px rgba(184, 205, 255, 0.2) inset;
+  border-color: rgba(4, 7, 15, 0.4);
+  border-top: 1px;
+  border-left: 1px;
+  border-right: 2px;
+  border-bottom: 2px;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(184, 205, 255, 0.3) !important;
+  background-gradient-end: rgba(4, 7, 15, 0.3) !important;
+}
+
+/* glass pane steel */
+.menu.semabe-blur-popup-pane-steel,
+.menu-favorites-box.popup-sub-menu.semabe-blur-popup-pane-steel,
+.semabe-blur-popup-pane-steel .grouped-window-list-thumbnail-menu .item-box,
+.semabe-blur-notification-pane-steel #notification {
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(229, 229, 254, 0.051) !important;
+  background-gradient-end: rgba(229, 229, 254, 0.051) !important;
+  box-shadow: 2px 2px 4px 1px rgba(229, 229, 254, 0.3) inset;
+  border-color: rgba(8, 8, 10, 0.4);
+  border-top: 1px;
+  border-left: 1px;
+  border-right: 2px;
+  border-bottom: 2px;
+}
+.menu.semabe-blur-popup-pane-steel .popup-sub-menu,
+.semabe-blur-popup-pane-steel .appmenu-applications-box,
+.semabe-blur-popup-pane-steel .popup-menu .popup-sub-menu,
+.semabe-blur-popup-pane-steel .popup-combo-menu .popup-sub-menu {
+  font-size: 0.88em;
+  padding: 0 1px 1px 0;
+  color: white;
+  border-radius: 8px;
+  box-shadow: -2px -2px 1.2px 0px rgba(229, 229, 254, 0.3) inset;
+  border-color: rgba(8, 8, 10, 0.4);
+  border-top: 2px;
+  border-left: 2px;
+  border-right: 0;
+  border-bottom: 0;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(8, 8, 10, 0.19);
+  background-gradient-end: rgba(8, 8, 10, 0.19);
+}
+.semabe-blur-popup-pane-steel .menu-favorites-box,
+.semabe-blur-popup-pane-steel .calendar,
+.semabe-blur-popup-pane-steel .appmenu-sidebar {
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(229, 229, 254, 0.2) !important;
+  background-gradient-end: rgba(229, 229, 254, 0.2) !important;
+  box-shadow: 2px 2px 4px 1px rgba(229, 229, 254, 0.3) inset;
+  border-color: rgba(8, 8, 10, 0.4);
+  border-top: 1px;
+  border-left: 1px;
+  border-right: 2px;
+  border-bottom: 2px;
+}
+.semabe-blur-popup-pane-steel .grouped-window-list-thumbnail-menu .item-box,
+.semabe-blur-notification-pane-steel #notification {
+  margin: 0;
+}
+.menu.semabe-blur-popup-pane-steel .popup-menu-item:hover,
+.menu.semabe-blur-popup-pane-steel .popup-menu-item:active,
+.popup-menu.semabe-blur-popup-pane-steel .popup-menu-item:hover,
+.popup-menu.semabe-blur-popup-pane-steel .popup-menu-item:active,
+.popup-combo-menu.semabe-blur-popup-pane-steel .popup-menu-item:hover,
+.popup-combo-menu.semabe-blur-popup-pane-steel .popup-menu-item:active,
+.popup-combo-menu.semabe-blur-popup-pane-steel .popup-menu-item:hover,
+.popup-combo-menu.semabe-blur-popup-pane-steel .popup-menu-item:active,
+.menu.semabe-blur-popup-pane-steel .menu-favorites-button:hover,
+.menu.semabe-blur-popup-pane-steel .menu-application-button:hover,
+.menu.semabe-blur-popup-pane-steel .appmenu-application-button:hover,
+.menu.semabe-blur-popup-pane-steel .menu-application-button-selected,
+.menu.semabe-blur-popup-pane-steel .appmenu-application-button-selected,
+.menu.semabe-blur-popup-pane-steel .menu-category-button-hover,
+.menu.semabe-blur-popup-pane-steel .menu-category-button-selected,
+.menu.semabe-blur-popup-pane-steel .appmenu-category-button-selected,
+.menu.semabe-blur-popup-pane-steel .appmenu-category-button:hover,
+.menu.semabe-blur-popup-pane-steel .appmenu-sidebar-button:hover,
+.appmenu-sidebar.semabe-blur-popup-pane-steel .appmenu-sidebar-button:hover {
+  box-shadow: 1.6px 1.6px 2px 1px rgba(229, 229, 254, 0.2) inset;
+  border-color: rgba(8, 8, 10, 0.4);
+  border-top: 1px;
+  border-left: 1px;
+  border-right: 2px;
+  border-bottom: 2px;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(229, 229, 254, 0.3) !important;
+  background-gradient-end: rgba(8, 8, 10, 0.3) !important;
+}
+
+/* glass pane violet */
+.menu.semabe-blur-popup-pane-violet,
+.menu-favorites-box.popup-sub-menu.semabe-blur-popup-pane-violet,
+.semabe-blur-popup-pane-violet .grouped-window-list-thumbnail-menu .item-box,
+.semabe-blur-notification-pane-violet #notification {
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255, 130, 255, 0.051) !important;
+  background-gradient-end: rgba(255, 130, 255, 0.051) !important;
+  box-shadow: 2px 2px 4px 1px rgba(255, 130, 255, 0.3) inset;
+  border-color: rgba(13, 0, 13, 0.4);
+  border-top: 1px;
+  border-left: 1px;
+  border-right: 2px;
+  border-bottom: 2px;
+}
+.menu.semabe-blur-popup-pane-violet .popup-sub-menu,
+.semabe-blur-popup-pane-violet .appmenu-applications-box,
+.semabe-blur-popup-pane-violet .popup-menu .popup-sub-menu,
+.semabe-blur-popup-pane-violet .popup-combo-menu .popup-sub-menu {
+  font-size: 0.88em;
+  padding: 0 1px 1px 0;
+  color: white;
+  border-radius: 8px;
+  box-shadow: -2px -2px 1.2px 0px rgba(255, 130, 255, 0.3) inset;
+  border-color: rgba(13, 0, 13, 0.4);
+  border-top: 2px;
+  border-left: 2px;
+  border-right: 0;
+  border-bottom: 0;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(13, 0, 13, 0.19);
+  background-gradient-end: rgba(13, 0, 13, 0.19);
+}
+.semabe-blur-popup-pane-violet .menu-favorites-box,
+.semabe-blur-popup-pane-violet .calendar,
+.semabe-blur-popup-pane-violet .appmenu-sidebar {
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255, 130, 255, 0.2) !important;
+  background-gradient-end: rgba(255, 130, 255, 0.2) !important;
+  box-shadow: 2px 2px 4px 1px rgba(255, 130, 255, 0.3) inset;
+  border-color: rgba(13, 0, 13, 0.4);
+  border-top: 1px;
+  border-left: 1px;
+  border-right: 2px;
+  border-bottom: 2px;
+}
+.semabe-blur-popup-pane-violet .grouped-window-list-thumbnail-menu .item-box,
+.semabe-blur-notification-pane-violet #notification {
+  margin: 0;
+}
+.menu.semabe-blur-popup-pane-violet .popup-menu-item:hover,
+.menu.semabe-blur-popup-pane-violet .popup-menu-item:active,
+.popup-menu.semabe-blur-popup-pane-violet .popup-menu-item:hover,
+.popup-menu.semabe-blur-popup-pane-violet .popup-menu-item:active,
+.popup-combo-menu.semabe-blur-popup-pane-violet .popup-menu-item:hover,
+.popup-combo-menu.semabe-blur-popup-pane-violet .popup-menu-item:active,
+.popup-combo-menu.semabe-blur-popup-pane-violet .popup-menu-item:hover,
+.popup-combo-menu.semabe-blur-popup-pane-violet .popup-menu-item:active,
+.menu.semabe-blur-popup-pane-violet .menu-favorites-button:hover,
+.menu.semabe-blur-popup-pane-violet .menu-application-button:hover,
+.menu.semabe-blur-popup-pane-violet .appmenu-application-button:hover,
+.menu.semabe-blur-popup-pane-violet .menu-application-button-selected,
+.menu.semabe-blur-popup-pane-violet .appmenu-application-button-selected,
+.menu.semabe-blur-popup-pane-violet .menu-category-button-hover,
+.menu.semabe-blur-popup-pane-violet .menu-category-button-selected,
+.menu.semabe-blur-popup-pane-violet .appmenu-category-button-selected,
+.menu.semabe-blur-popup-pane-violet .appmenu-category-button:hover,
+.menu.semabe-blur-popup-pane-violet .appmenu-sidebar-button:hover,
+.appmenu-sidebar.semabe-blur-popup-pane-violet .appmenu-sidebar-button:hover {
+  box-shadow: 1.6px 1.6px 2px 1px rgba(255, 130, 255, 0.2) inset;
+  border-color: rgba(13, 0, 13, 0.4);
+  border-top: 1px;
+  border-left: 1px;
+  border-right: 2px;
+  border-bottom: 2px;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255, 130, 255, 0.3) !important;
+  background-gradient-end: rgba(13, 0, 13, 0.3) !important;
+}
+
+/* tempered glass azure */
+.menu.semabe-blur-popup-tempered-azure,
+.menu-favorites-box.popup-sub-menu.semabe-blur-popup-tempered-azure,
+.semabe-blur-popup-tempered-azure .grouped-window-list-thumbnail-menu .item-box,
+.semabe-blur-notification-tempered-azure #notification {
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(0, 24, 112, 0.4) !important;
+  background-gradient-end: rgba(0, 24, 112, 0.4) !important;
+  box-shadow: 2px 2px 1.2px 0px rgba(71, 163, 255, 0.4) inset;
+  border-color: rgba(0, 5, 23, 0.8);
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 2px;
+  border-bottom: 2px;
+  margin: 6px;
+  padding: 0px;
+}
+.semabe-blur-notification-tempered-azure #notification {
+  padding: 10px;}
+.semabe-blur-popup-tempered-azure .appmenu-applications-box {
+  background-gradient-direction: vertical;
+  background-gradient-start: transparent;
+  background-gradient-end: transparent;
+  box-shadow: none;
+  border-color: rgba(0, 5, 23, 0.0);
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: 0px;
+  padding-top: 0px;
+}
+.semabe-blur-popup-tempered-azure .appmenu-categories-applications-box {
+  padding: 6px;
+}
+.semabe-blur-popup-tempered-azure .appmenu-sidebar {
+  margin: 0px;
+  padding: 8px;
+  border-radius: 10px 0 0 10px;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(71, 163, 255, 0.3);
+  background-gradient-end: rgba(53, 122, 191, 0.3);
+  box-shadow: 2px 2px 1.2px 0px rgba(71, 163, 255, 0.4) inset;
+  border-color: rgba(0, 5, 23, 0.7);
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 1px;
+  border-bottom: 0px;
+}
+.semabe-blur-popup-tempered-azure .appmenu-search-box {
+  padding: 6px 6px 4px 6px;
+  spacing: 0;
+}
+.semabe-blur-popup-tempered-azure .menu-favorites-box,
+.semabe-blur-popup-tempered-azure .calendar {
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(71, 163, 255, 0.3);
+  background-gradient-end: rgba(53, 122, 191, 0.3);
+  box-shadow: 2px 2px 1.2px 0px rgba(71, 163, 255, 0.4) inset;
+  border-color: rgba(0, 5, 23, 0.7);
+  border-top: 1px;
+  border-left: 1px;
+  border-right: 2px;
+  border-bottom: 2px;
+}
+.semabe-blur-popup-tempered-azure .menu-categories-box,
+.semabe-blur-popup-tempered-azure .menu-applications-inner-box {
+  box-shadow: 2px 2px 1.2px 0px rgba(71, 163, 255, 0.4) inset;
+}
+
+.semabe-blur-popup-tempered-azure .grouped-window-list-thumbnail-menu .item-box,
+.semabe-blur-notification-tempered-azure #notification {
+  margin: 0;
+}
+.semabe-blur-popup-tempered-azure .calendar-event-button {
+  transition-duration: 0;
+  box-shadow: -2px -2px 1.1px 0px rgba(71, 163, 255, 0.25) inset;
+  border-color: rgba(0, 5, 23, 0.6);
+}
+.semabe-blur-popup-tempered-azure .calendar-event-button:hover {
+  transition-duration: 0;
+  box-shadow: 1.4px 1.4px 1.2px 0px rgba(71, 163, 255, 0.3) inset;
+  border-color: rgba(0, 5, 23, 0.5);
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 1px;
+  border-bottom: 1px;margin-top:1px;margin-left:1px;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(71, 163, 255, 0.06);
+  background-gradient-end: rgba(71, 163, 255, 0.06);
+}
+.menu.semabe-blur-popup-tempered-azure .popup-menu-item:hover,
+.menu.semabe-blur-popup-tempered-azure .popup-menu-item:active,
+.popup-menu.semabe-blur-popup-tempered-azure .popup-menu-item:hover,
+.popup-menu.semabe-blur-popup-tempered-azure .popup-menu-item:active,
+.popup-combo-menu.semabe-blur-popup-tempered-azure .popup-menu-item:hover,
+.popup-combo-menu.semabe-blur-popup-tempered-azure .popup-menu-item:active,
+.menu.semabe-blur-popup-tempered-azure .menu-favorites-button:hover,
+.menu.semabe-blur-popup-tempered-azure .menu-application-button:hover,
+.menu.semabe-blur-popup-tempered-azure .appmenu-application-button:hover,
+.menu.semabe-blur-popup-tempered-azure .menu-application-button-selected,
+.menu.semabe-blur-popup-tempered-azure .appmenu-application-button-selected,
+.menu.semabe-blur-popup-tempered-azure .menu-category-button-hover,
+.menu.semabe-blur-popup-tempered-azure .menu-category-button-selected,
+.menu.semabe-blur-popup-tempered-azure .appmenu-category-button-selected,
+.menu.semabe-blur-popup-tempered-azure .appmenu-category-button:hover,
+.menu.semabe-blur-popup-tempered-azure .appmenu-sidebar-button:hover {
+  box-shadow: 1.6px 1.6px 1.2px 0px rgba(71, 163, 255, 0.4) inset;
+  border-color: rgba(0, 5, 23, 0.4);
+  border-top: 1px;
+  border-left: 1px;
+  border-right: 2px;
+  border-bottom: 2px;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(53, 122, 191, 0.3) !important;
+  background-gradient-end: rgba(53, 122, 191, 0.3) !important;
+}
+
+/* tempered glass cinnamon */
+.menu.semabe-blur-popup-tempered-cinnamon,
+.menu-favorites-box.popup-sub-menu.semabe-blur-popup-tempered-cinnamon,
+.semabe-blur-popup-tempered-cinnamon .grouped-window-list-thumbnail-menu .item-box,
+.semabe-blur-notification-tempered-cinnamon #notification {
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(115, 38, 0, 0.4) !important;
+  background-gradient-end: rgba(115, 38, 0, 0.4) !important;
+  box-shadow: 2px 2px 1.2px 0px rgba(255, 102, 25, 0.4) inset;
+  border-color: rgba(15, 5, 0, 0.8);
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 2px;
+  border-bottom: 2px;
+  margin: 6px;
+  padding: 0px;
+}
+.semabe-blur-notification-tempered-cinnamon #notification {
+  padding: 10px;}
+.semabe-blur-popup-tempered-cinnamon .appmenu-applications-box {
+  background-gradient-direction: vertical;
+  background-gradient-start: transparent;
+  background-gradient-end: transparent;
+  box-shadow: none;
+  border-color: rgba(15, 5, 0, 0.0);
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: 0px;
+  padding-top: 0px;
+}
+.semabe-blur-popup-tempered-cinnamon .appmenu-categories-applications-box {
+  padding: 6px;
+}
+.semabe-blur-popup-tempered-cinnamon .appmenu-sidebar {
+  margin: 0px;
+  padding: 8px;
+  border-radius: 10px 0 0 10px;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255, 102, 25, 0.3);
+  background-gradient-end: rgba(191, 76, 19, 0.3);
+  box-shadow: 2px 2px 1.2px 0px rgba(255, 102, 25, 0.4) inset;
+  border-color: rgba(15, 5, 0, 0.7);
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 1px;
+  border-bottom: 0px;
+}
+.semabe-blur-popup-tempered-cinnamon .appmenu-search-box {
+  padding: 6px 6px 4px 6px;
+  spacing: 0;
+}
+.semabe-blur-popup-tempered-cinnamon .menu-favorites-box,
+.semabe-blur-popup-tempered-cinnamon .calendar {
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255, 102, 25, 0.3);
+  background-gradient-end: rgba(191, 76, 19, 0.3);
+  box-shadow: 2px 2px 1.2px 0px rgba(255, 102, 25, 0.4) inset;
+  border-color: rgba(15, 5, 0, 0.7);
+  border-top: 1px;
+  border-left: 1px;
+  border-right: 2px;
+  border-bottom: 2px;
+}
+.semabe-blur-popup-tempered-cinnamon .menu-categories-box,
+.semabe-blur-popup-tempered-cinnamon .menu-applications-inner-box {
+  box-shadow: 2px 2px 1.2px 0px rgba(255, 102, 25, 0.4) inset;
+}
+.semabe-blur-popup-tempered-cinnamon .grouped-window-list-thumbnail-menu .item-box,
+.semabe-blur-notification-tempered-cinnamon #notification {
+  margin: 0;
+}
+.semabe-blur-popup-tempered-cinnamon .calendar-event-button {
+  transition-duration: 0;
+  box-shadow: -2px -2px 1.1px 0px rgba(255, 102, 25, 0.25) inset;
+  border-color: rgba(15, 5, 0, 0.6);
+}
+.semabe-blur-popup-tempered-cinnamon .calendar-event-button:hover {
+  transition-duration: 0;
+  box-shadow: 1.4px 1.4px 1.2px 0px rgba(255, 102, 25, 0.3) inset;
+  border-color: rgba(15, 5, 0, 0.5);
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 1px;
+  border-bottom: 1px;margin-top:1px;margin-left:1px;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255, 102, 25, 0.06);
+  background-gradient-end: rgba(255, 102, 25, 0.06);
+}
+.menu.semabe-blur-popup-tempered-cinnamon .popup-menu-item:hover,
+.menu.semabe-blur-popup-tempered-cinnamon .popup-menu-item:active,
+.popup-menu.semabe-blur-popup-tempered-cinnamon .popup-menu-item:hover,
+.popup-menu.semabe-blur-popup-tempered-cinnamon .popup-menu-item:active,
+.popup-combo-menu.semabe-blur-popup-tempered-cinnamon .popup-menu-item:hover,
+.popup-combo-menu.semabe-blur-popup-tempered-cinnamon .popup-menu-item:active,
+.menu.semabe-blur-popup-tempered-cinnamon .menu-favorites-button:hover,
+.menu.semabe-blur-popup-tempered-cinnamon .menu-application-button:hover,
+.menu.semabe-blur-popup-tempered-cinnamon .appmenu-application-button:hover,
+.menu.semabe-blur-popup-tempered-cinnamon .menu-application-button-selected,
+.menu.semabe-blur-popup-tempered-cinnamon .appmenu-application-button-selected,
+.menu.semabe-blur-popup-tempered-cinnamon .menu-category-button-hover,
+.menu.semabe-blur-popup-tempered-cinnamon .menu-category-button-selected,
+.menu.semabe-blur-popup-tempered-cinnamon .appmenu-category-button-selected,
+.menu.semabe-blur-popup-tempered-cinnamon .appmenu-category-button:hover,
+.menu.semabe-blur-popup-tempered-cinnamon .appmenu-sidebar-button:hover {
+  box-shadow: 1.6px 1.6px 1.2px 0px rgba(255, 102, 25, 0.4) inset;
+  border-color: rgba(15, 5, 0, 0.4);
+  border-top: 1px;
+  border-left: 1px;
+  border-right: 2px;
+  border-bottom: 2px;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(191, 76, 19, 0.3) !important;
+  background-gradient-end: rgba(191, 76, 19, 0.3) !important;
+}
+
+/* tempered glass crimson */
+.menu.semabe-blur-popup-tempered-crimson,
+.menu-favorites-box.popup-sub-menu.semabe-blur-popup-tempered-crimson,
+.semabe-blur-popup-tempered-crimson .grouped-window-list-thumbnail-menu .item-box,
+.semabe-blur-notification-tempered-crimson #notification {
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(103, 0, 28, 0.4) !important;
+  background-gradient-end: rgba(103, 0, 28, 0.4) !important;
+  box-shadow: 2px 2px 1.2px 0px rgba(255, 87, 129, 0.4) inset;
+  border-color: rgba(13, 0, 3, 0.8);
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 2px;
+  border-bottom: 2px;
+  margin: 6px;
+  padding: 0px;
+}
+.semabe-blur-notification-tempered-crimson #notification {
+  padding: 10px;}
+.semabe-blur-popup-tempered-crimson .appmenu-applications-box {
+  background-gradient-direction: vertical;
+  background-gradient-start: transparent;
+  background-gradient-end: transparent;
+  box-shadow: none;
+  border-color: rgba(13, 0, 3, 0.0);
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: 0px;
+  padding-top: 0px;
+}
+.semabe-blur-popup-tempered-crimson .appmenu-categories-applications-box {
+  padding: 6px;
+}
+.semabe-blur-popup-tempered-crimson .appmenu-sidebar {
+  margin: 0px;
+  padding: 8px;
+  border-radius: 10px 0 0 10px;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255, 87, 129, 0.3);
+  background-gradient-end: rgba(174, 59, 90, 0.3);
+  box-shadow: 2px 2px 1.2px 0px rgba(255, 87, 129, 0.4) inset;
+  border-color: rgba(13, 0, 3, 0.7);
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 1px;
+  border-bottom: 0px;
+}
+.semabe-blur-popup-tempered-crimson .appmenu-search-box {
+  padding: 6px 6px 4px 6px;
+  spacing: 0;
+}
+.semabe-blur-popup-tempered-crimson .menu-favorites-box,
+.semabe-blur-popup-tempered-crimson .calendar {
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255, 87, 129, 0.3);
+  background-gradient-end: rgba(174, 59, 90, 0.3);
+  box-shadow: 2px 2px 1.2px 0px rgba(255, 87, 129, 0.4) inset;
+  border-color: rgba(13, 0, 3, 0.7);
+  border-top: 1px;
+  border-left: 1px;
+  border-right: 2px;
+  border-bottom: 2px;
+}
+.semabe-blur-popup-tempered-crimson .menu-categories-box,
+.semabe-blur-popup-tempered-crimson .menu-applications-inner-box {
+  box-shadow: 2px 2px 1.2px 0px rgba(255, 87, 129, 0.4) inset;
+}
+.semabe-blur-popup-tempered-crimson .grouped-window-list-thumbnail-menu .item-box,
+.semabe-blur-notification-tempered-crimson #notification {
+  margin: 0;
+}
+.semabe-blur-popup-tempered-crimson .calendar-event-button {
+  transition-duration: 0;
+  box-shadow: -2px -2px 1.1px 0px rgba(255, 87, 129, 0.25) inset;
+  border-color: rgba(13, 0, 3, 0.6);
+}
+.semabe-blur-popup-tempered-crimson .calendar-event-button:hover {
+  transition-duration: 0;
+  box-shadow: 1.4px 1.4px 1.2px 0px rgba(255, 87, 129, 0.3) inset;
+  border-color: rgba(13, 0, 3, 0.5);
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 1px;
+  border-bottom: 1px;margin-top:1px;margin-left:1px;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255, 87, 129, 0.06);
+  background-gradient-end: rgba(255, 87, 129, 0.06);
+}
+.menu.semabe-blur-popup-tempered-crimson .popup-menu-item:hover,
+.menu.semabe-blur-popup-tempered-crimson .popup-menu-item:active,
+.popup-menu.semabe-blur-popup-tempered-crimson .popup-menu-item:hover,
+.popup-menu.semabe-blur-popup-tempered-crimson .popup-menu-item:active,
+.popup-combo-menu.semabe-blur-popup-tempered-crimson .popup-menu-item:hover,
+.popup-combo-menu.semabe-blur-popup-tempered-crimson .popup-menu-item:active,
+.menu.semabe-blur-popup-tempered-crimson .menu-favorites-button:hover,
+.menu.semabe-blur-popup-tempered-crimson .menu-application-button:hover,
+.menu.semabe-blur-popup-tempered-crimson .appmenu-application-button:hover,
+.menu.semabe-blur-popup-tempered-crimson .menu-application-button-selected,
+.menu.semabe-blur-popup-tempered-crimson .appmenu-application-button-selected,
+.menu.semabe-blur-popup-tempered-crimson .menu-category-button-hover,
+.menu.semabe-blur-popup-tempered-crimson .menu-category-button-selected,
+.menu.semabe-blur-popup-tempered-crimson .appmenu-category-button-selected,
+.menu.semabe-blur-popup-tempered-crimson .appmenu-category-button:hover,
+.menu.semabe-blur-popup-tempered-crimson .appmenu-sidebar-button:hover {
+  box-shadow: 1.6px 1.6px 1.2px 0px rgba(255, 87, 129, 0.4) inset;
+  border-color: rgba(13, 0, 3, 0.4);
+  border-top: 1px;
+  border-left: 1px;
+  border-right: 2px;
+  border-bottom: 2px;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(174, 59, 90, 0.3) !important;
+  background-gradient-end: rgba(174, 59, 90, 0.3) !important;
+}
+
+/* tempered glass falcon */
+.menu.semabe-blur-popup-tempered-falcon,
+.menu-favorites-box.popup-sub-menu.semabe-blur-popup-tempered-falcon,
+.semabe-blur-popup-tempered-falcon .grouped-window-list-thumbnail-menu .item-box,
+.semabe-blur-notification-tempered-falcon #notification {
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(85, 32, 52, 0.4) !important;
+  background-gradient-end: rgba(85, 32, 52, 0.4) !important;
+  box-shadow: 2px 2px 1.2px 0px rgba(255, 199, 219, 0.4) inset;
+  border-color: rgba(13, 4, 7, 0.8);
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 2px;
+  border-bottom: 2px;
+  margin: 6px;
+  padding: 0px;
+}
+.semabe-blur-notification-tempered-falcon #notification {
+  padding: 10px;}
+.semabe-blur-popup-tempered-falcon .appmenu-applications-box {
+  background-gradient-direction: vertical;
+  background-gradient-start: transparent;
+  background-gradient-end: transparent;
+  box-shadow: none;
+  border-color: rgba(13, 4, 7, 0.0);
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: 0px;
+  padding-top: 0px;
+}
+.semabe-blur-popup-tempered-falcon .appmenu-categories-applications-box {
+  padding: 6px;
+}
+.semabe-blur-popup-tempered-falcon .appmenu-sidebar {
+  margin: 0px;
+  padding: 8px;
+  border-radius: 10px 0 0 10px;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255, 199, 219, 0.3);
+  background-gradient-end: rgba(144, 112, 124, 0.3);
+  box-shadow: 2px 2px 1.2px 0px rgba(255, 199, 219, 0.4) inset;
+  border-color: rgba(13, 4, 7, 0.7);
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 1px;
+  border-bottom: 0px;
+}
+.semabe-blur-popup-tempered-falcon .appmenu-search-box {
+  padding: 6px 6px 4px 6px;
+  spacing: 0;
+}
+.semabe-blur-popup-tempered-falcon .menu-favorites-box,
+.semabe-blur-popup-tempered-falcon .calendar {
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255, 199, 219, 0.3);
+  background-gradient-end: rgba(144, 112, 124, 0.3);
+  box-shadow: 2px 2px 1.2px 0px rgba(255, 199, 219, 0.4) inset;
+  border-color: rgba(13, 4, 7, 0.7);
+  border-top: 1px;
+  border-left: 1px;
+  border-right: 2px;
+  border-bottom: 2px;
+}
+.semabe-blur-popup-tempered-falcon .menu-categories-box,
+.semabe-blur-popup-tempered-falcon .menu-applications-inner-box {
+  box-shadow: 2px 2px 1.2px 0px rgba(255, 199, 219, 0.4) inset;
+}
+.semabe-blur-popup-tempered-falcon .grouped-window-list-thumbnail-menu .item-box,
+.semabe-blur-notification-tempered-falcon #notification {
+  margin: 0;
+}
+.semabe-blur-popup-tempered-falcon .calendar-event-button {
+  transition-duration: 0;
+  box-shadow: -2px -2px 1.1px 0px rgba(255, 199, 219, 0.25) inset;
+  border-color: rgba(13, 4, 7, 0.6);
+}
+.semabe-blur-popup-tempered-falcon .calendar-event-button:hover {
+  transition-duration: 0;
+  box-shadow: 1.4px 1.4px 1.2px 0px rgba(255, 199, 219, 0.3) inset;
+  border-color: rgba(13, 4, 7, 0.5);
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 1px;
+  border-bottom: 1px;margin-top:1px;margin-left:1px;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255, 199, 219, 0.06);
+  background-gradient-end: rgba(255, 199, 219, 0.06);
+}
+.menu.semabe-blur-popup-tempered-falcon .popup-menu-item:hover,
+.menu.semabe-blur-popup-tempered-falcon .popup-menu-item:active,
+.popup-menu.semabe-blur-popup-tempered-falcon .popup-menu-item:hover,
+.popup-menu.semabe-blur-popup-tempered-falcon .popup-menu-item:active,
+.popup-combo-menu.semabe-blur-popup-tempered-falcon .popup-menu-item:hover,
+.popup-combo-menu.semabe-blur-popup-tempered-falcon .popup-menu-item:active,
+.menu.semabe-blur-popup-tempered-falcon .menu-favorites-button:hover,
+.menu.semabe-blur-popup-tempered-falcon .menu-application-button:hover,
+.menu.semabe-blur-popup-tempered-falcon .appmenu-application-button:hover,
+.menu.semabe-blur-popup-tempered-falcon .menu-application-button-selected,
+.menu.semabe-blur-popup-tempered-falcon .appmenu-application-button-selected,
+.menu.semabe-blur-popup-tempered-falcon .menu-category-button-hover,
+.menu.semabe-blur-popup-tempered-falcon .menu-category-button-selected,
+.menu.semabe-blur-popup-tempered-falcon .appmenu-category-button-selected,
+.menu.semabe-blur-popup-tempered-falcon .appmenu-category-button:hover,
+.menu.semabe-blur-popup-tempered-falcon .appmenu-sidebar-button:hover {
+  box-shadow: 1.6px 1.6px 1.2px 0px rgba(255, 199, 219, 0.4) inset;
+  border-color: rgba(13, 4, 7, 0.4);
+  border-top: 1px;
+  border-left: 1px;
+  border-right: 2px;
+  border-bottom: 2px;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(144, 112, 124, 0.3) !important;
+  background-gradient-end: rgba(144, 112, 124, 0.3) !important;
+}
+
+/* tempered glass grey */
+.menu.semabe-blur-popup-tempered-grey,
+.menu-favorites-box.popup-sub-menu.semabe-blur-popup-tempered-grey,
+.semabe-blur-popup-tempered-grey .grouped-window-list-thumbnail-menu .item-box,
+.semabe-blur-notification-tempered-grey #notification {
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(69, 69, 69, 0.4) !important;
+  background-gradient-end: rgba(69, 69, 69, 0.4) !important;
+  box-shadow: 2px 2px 1.2px 0px rgba(254, 254, 254, 0.4) inset;
+  border-color: rgba(10, 10, 10, 0.8);
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 2px;
+  border-bottom: 2px;
+  margin: 6px;
+  padding: 0px;
+}
+.semabe-blur-notification-tempered-grey #notification {
+  padding: 10px;}
+.semabe-blur-popup-tempered-grey .appmenu-applications-box {
+  background-gradient-direction: vertical;
+  background-gradient-start: transparent;
+  background-gradient-end: transparent;
+  box-shadow: none;
+  border-color: rgba(10, 10, 10, 0.0);
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: 0px;
+  padding-top: 0px;
+}
+.semabe-blur-popup-tempered-grey .appmenu-categories-applications-box {
+  padding: 6px;
+}
+.semabe-blur-popup-tempered-grey .appmenu-sidebar {
+  margin: 0px;
+  padding: 8px;
+  border-radius: 10px 0 0 10px;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(254, 254, 254, 0.3);
+  background-gradient-end: rgba(115, 115, 115, 0.3);
+  box-shadow: 2px 2px 1.2px 0px rgba(254, 254, 254, 0.4) inset;
+  border-color: rgba(10, 10, 10, 0.7);
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 1px;
+  border-bottom: 0px;
+}
+.semabe-blur-popup-tempered-grey .appmenu-search-box {
+  padding: 6px 6px 4px 6px;
+  spacing: 0;
+}
+.semabe-blur-popup-tempered-grey .menu-favorites-box,
+.semabe-blur-popup-tempered-grey .calendar {
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(254, 254, 254, 0.3);
+  background-gradient-end: rgba(115, 115, 115, 0.3);
+  box-shadow: 2px 2px 1.2px 0px rgba(254, 254, 254, 0.4) inset;
+  border-color: rgba(10, 10, 10, 0.7);
+  border-top: 1px;
+  border-left: 1px;
+  border-right: 2px;
+  border-bottom: 2px;
+}
+.semabe-blur-popup-tempered-grey .menu-categories-box,
+.semabe-blur-popup-tempered-grey .menu-applications-inner-box {
+  box-shadow: 2px 2px 1.2px 0px rgba(254, 254, 254, 0.4) inset;
+}
+.semabe-blur-popup-tempered-grey .grouped-window-list-thumbnail-menu .item-box,
+.semabe-blur-notification-tempered-grey #notification {
+  margin: 0;
+}
+.semabe-blur-popup-tempered-grey .calendar-event-button {
+  transition-duration: 0;
+  box-shadow: -2px -2px 1.1px 0px rgba(254, 254, 254, 0.25) inset;
+  border-color: rgba(10, 10, 10, 0.6);
+}
+.semabe-blur-popup-tempered-grey .calendar-event-button:hover {
+  transition-duration: 0;
+  box-shadow: 1.4px 1.4px 1.2px 0px rgba(254, 254, 254, 0.3) inset;
+  border-color: rgba(10, 10, 10, 0.5);
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 1px;
+  border-bottom: 1px;margin-top:1px;margin-left:1px;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(254, 254, 254, 0.06);
+  background-gradient-end: rgba(254, 254, 254, 0.06);
+}
+.menu.semabe-blur-popup-tempered-grey .popup-menu-item:hover,
+.menu.semabe-blur-popup-tempered-grey .popup-menu-item:active,
+.popup-menu.semabe-blur-popup-tempered-grey .popup-menu-item:hover,
+.popup-menu.semabe-blur-popup-tempered-grey .popup-menu-item:active,
+.popup-combo-menu.semabe-blur-popup-tempered-grey .popup-menu-item:hover,
+.popup-combo-menu.semabe-blur-popup-tempered-grey .popup-menu-item:active,
+.menu.semabe-blur-popup-tempered-grey .menu-favorites-button:hover,
+.menu.semabe-blur-popup-tempered-grey .menu-application-button:hover,
+.menu.semabe-blur-popup-tempered-grey .appmenu-application-button:hover,
+.menu.semabe-blur-popup-tempered-grey .menu-application-button-selected,
+.menu.semabe-blur-popup-tempered-grey .appmenu-application-button-selected,
+.menu.semabe-blur-popup-tempered-grey .menu-category-button-hover,
+.menu.semabe-blur-popup-tempered-grey .menu-category-button-selected,
+.menu.semabe-blur-popup-tempered-grey .appmenu-category-button-selected,
+.menu.semabe-blur-popup-tempered-grey .appmenu-category-button:hover,
+.menu.semabe-blur-popup-tempered-grey .appmenu-sidebar-button:hover {
+  box-shadow: 1.6px 1.6px 1.2px 0px rgba(254, 254, 254, 0.4) inset;
+  border-color: rgba(10, 10, 10, 0.4);
+  border-top: 1px;
+  border-left: 1px;
+  border-right: 2px;
+  border-bottom: 2px;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(115, 115, 115, 0.3) !important;
+  background-gradient-end: rgba(115, 115, 115, 0.3) !important;
+}
+
+/* tempered glass mint */
+.menu.semabe-blur-popup-tempered-mint,
+.menu-favorites-box.popup-sub-menu.semabe-blur-popup-tempered-mint,
+.semabe-blur-popup-tempered-mint .grouped-window-list-thumbnail-menu .item-box,
+.semabe-blur-notification-tempered-mint #notification {
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(0, 82, 39, 0.4) !important;
+  background-gradient-end: rgba(0, 82, 39, 0.4) !important;
+  box-shadow: 2px 2px 1.2px 0px rgba(76, 255, 160, 0.4) inset;
+  border-color: rgba(0, 13, 6, 0.8);
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 2px;
+  border-bottom: 2px;
+  margin: 6px;
+  padding: 0px;
+}
+.semabe-blur-notification-tempered-mint #notification {
+  padding: 10px;}
+.semabe-blur-popup-tempered-mint .appmenu-applications-box {
+  background-gradient-direction: vertical;
+  background-gradient-start: transparent;
+  background-gradient-end: transparent;
+  box-shadow: none;
+  border-color: rgba(0, 13, 6, 0.0);
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: 0px;
+  padding-top: 0px;
+}
+.semabe-blur-popup-tempered-mint .appmenu-categories-applications-box {
+  padding: 6px;
+}
+.semabe-blur-popup-tempered-mint .appmenu-sidebar {
+  margin: 0px;
+  padding: 8px;
+  border-radius: 10px 0 0 10px;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(76, 255, 160, 0.3);
+  background-gradient-end: rgba(43, 143, 90, 0.3);
+  box-shadow: 2px 2px 1.2px 0px rgba(76, 255, 160, 0.4) inset;
+  border-color: rgba(0, 13, 6, 0.7);
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 1px;
+  border-bottom: 0px;
+}
+.semabe-blur-popup-tempered-mint .appmenu-search-box {
+  padding: 6px 6px 4px 6px;
+  spacing: 0;
+}
+.semabe-blur-popup-tempered-mint .menu-favorites-box,
+.semabe-blur-popup-tempered-mint .calendar {
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(76, 255, 160, 0.3);
+  background-gradient-end: rgba(43, 143, 90, 0.3);
+  box-shadow: 2px 2px 1.2px 0px rgba(76, 255, 160, 0.4) inset;
+  border-color: rgba(0, 13, 6, 0.7);
+  border-top: 1px;
+  border-left: 1px;
+  border-right: 2px;
+  border-bottom: 2px;
+}
+.semabe-blur-popup-tempered-mint .menu-categories-box,
+.semabe-blur-popup-tempered-mint .menu-applications-inner-box {
+  box-shadow: 2px 2px 1.2px 0px rgba(76, 255, 160, 0.4) inset;
+}
+.semabe-blur-popup-tempered-mint .grouped-window-list-thumbnail-menu .item-box,
+.semabe-blur-notification-tempered-mint #notification {
+  margin: 0;
+}
+.semabe-blur-popup-tempered-mint .calendar-event-button {
+  transition-duration: 0;
+  box-shadow: -2px -2px 1.1px 0px rgba(76, 255, 160, 0.25) inset;
+  border-color: rgba(0, 13, 6, 0.6);
+}
+.semabe-blur-popup-tempered-mint .calendar-event-button:hover {
+  transition-duration: 0;
+  box-shadow: 1.4px 1.4px 1.2px 0px rgba(76, 255, 160, 0.3) inset;
+  border-color: rgba(0, 13, 6, 0.5);
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 1px;
+  border-bottom: 1px;margin-top:1px;margin-left:1px;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(76, 255, 160, 0.06);
+  background-gradient-end: rgba(76, 255, 160, 0.06);
+}
+.menu.semabe-blur-popup-tempered-mint .popup-menu-item:hover,
+.menu.semabe-blur-popup-tempered-mint .popup-menu-item:active,
+.popup-menu.semabe-blur-popup-tempered-mint .popup-menu-item:hover,
+.popup-menu.semabe-blur-popup-tempered-mint .popup-menu-item:active,
+.popup-combo-menu.semabe-blur-popup-tempered-mint .popup-menu-item:hover,
+.popup-combo-menu.semabe-blur-popup-tempered-mint .popup-menu-item:active,
+.menu.semabe-blur-popup-tempered-mint .menu-favorites-button:hover,
+.menu.semabe-blur-popup-tempered-mint .menu-application-button:hover,
+.menu.semabe-blur-popup-tempered-mint .appmenu-application-button:hover,
+.menu.semabe-blur-popup-tempered-mint .menu-application-button-selected,
+.menu.semabe-blur-popup-tempered-mint .appmenu-application-button-selected,
+.menu.semabe-blur-popup-tempered-mint .menu-category-button-hover,
+.menu.semabe-blur-popup-tempered-mint .menu-category-button-selected,
+.menu.semabe-blur-popup-tempered-mint .appmenu-category-button-selected,
+.menu.semabe-blur-popup-tempered-mint .appmenu-category-button:hover,
+.menu.semabe-blur-popup-tempered-mint .appmenu-sidebar-button:hover {
+  box-shadow: 1.6px 1.6px 1.2px 0px rgba(76, 255, 160, 0.4) inset;
+  border-color: rgba(0, 13, 6, 0.4);
+  border-top: 1px;
+  border-left: 1px;
+  border-right: 2px;
+  border-bottom: 2px;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(43, 143, 90, 0.3) !important;
+  background-gradient-end: rgba(43, 143, 90, 0.3) !important;
+}
+
+/* tempered glass nordic */
+.menu.semabe-blur-popup-tempered-nordic,
+.menu-favorites-box.popup-sub-menu.semabe-blur-popup-tempered-nordic,
+.semabe-blur-popup-tempered-nordic .grouped-window-list-thumbnail-menu .item-box,
+.semabe-blur-notification-tempered-nordic #notification {
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(20, 39, 91, 0.4) !important;
+  background-gradient-end: rgba(20, 39, 91, 0.4) !important;
+  box-shadow: 2px 2px 1.2px 0px rgba(184, 205, 255, 0.4) inset;
+  border-color: rgba(4, 7, 15, 0.8);
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 2px;
+  border-bottom: 2px;
+  margin: 6px;
+  padding: 0px;
+}
+.semabe-blur-notification-tempered-nordic #notification {
+  padding: 10px;}
+.semabe-blur-popup-tempered-nordic .appmenu-applications-box {
+  background-gradient-direction: vertical;
+  background-gradient-start: transparent;
+  background-gradient-end: transparent;
+  box-shadow: none;
+  border-color: rgba(4, 7, 15, 0.0);
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: 0px;
+  padding-top: 0px;
+}
+.semabe-blur-popup-tempered-nordic .appmenu-categories-applications-box {
+  padding: 6px;
+}
+.semabe-blur-popup-tempered-nordic .appmenu-sidebar {
+  margin: 0px;
+  padding: 8px;
+  border-radius: 10px 0 0 10px;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(184, 205, 255, 0.3);
+  background-gradient-end: rgba(111, 124, 154, 0.3);
+  box-shadow: 2px 2px 1.2px 0px rgba(184, 205, 255, 0.4) inset;
+  border-color: rgba(4, 7, 15, 0.7);
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 1px;
+  border-bottom: 0px;
+}
+.semabe-blur-popup-tempered-nordic .appmenu-search-box {
+  padding: 6px 6px 4px 6px;
+  spacing: 0;
+}
+.semabe-blur-popup-tempered-nordic .menu-favorites-box,
+.semabe-blur-popup-tempered-nordic .calendar {
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(184, 205, 255, 0.3);
+  background-gradient-end: rgba(111, 124, 154, 0.3);
+  box-shadow: 2px 2px 1.2px 0px rgba(184, 205, 255, 0.4) inset;
+  border-color: rgba(4, 7, 15, 0.7);
+  border-top: 1px;
+  border-left: 1px;
+  border-right: 2px;
+  border-bottom: 2px;
+}
+.semabe-blur-popup-tempered-nordic .menu-categories-box,
+.semabe-blur-popup-tempered-nordic .menu-applications-inner-box {
+  box-shadow: 2px 2px 1.2px 0px rgba(184, 205, 255, 0.4) inset;
+}
+.semabe-blur-popup-tempered-nordic .grouped-window-list-thumbnail-menu .item-box,
+.semabe-blur-notification-tempered-nordic #notification {
+  margin: 0;
+}
+.semabe-blur-popup-tempered-nordic .calendar-event-button {
+  transition-duration: 0;
+  box-shadow: -2px -2px 1.1px 0px rgba(184, 205, 255, 0.25) inset;
+  border-color: rgba(4, 7, 15, 0.6);
+}
+.semabe-blur-popup-tempered-nordic .calendar-event-button:hover {
+  transition-duration: 0;
+  box-shadow: 1.4px 1.4px 1.2px 0px rgba(184, 205, 255, 0.3) inset;
+  border-color: rgba(4, 7, 15, 0.5);
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 1px;
+  border-bottom: 1px;margin-top:1px;margin-left:1px;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(184, 205, 255, 0.06);
+  background-gradient-end: rgba(184, 205, 255, 0.06);
+}
+.menu.semabe-blur-popup-tempered-nordic .popup-menu-item:hover,
+.menu.semabe-blur-popup-tempered-nordic .popup-menu-item:active,
+.popup-menu.semabe-blur-popup-tempered-nordic .popup-menu-item:hover,
+.popup-menu.semabe-blur-popup-tempered-nordic .popup-menu-item:active,
+.popup-combo-menu.semabe-blur-popup-tempered-nordic .popup-menu-item:hover,
+.popup-combo-menu.semabe-blur-popup-tempered-nordic .popup-menu-item:active,
+.menu.semabe-blur-popup-tempered-nordic .menu-favorites-button:hover,
+.menu.semabe-blur-popup-tempered-nordic .menu-application-button:hover,
+.menu.semabe-blur-popup-tempered-nordic .appmenu-application-button:hover,
+.menu.semabe-blur-popup-tempered-nordic .menu-application-button-selected,
+.menu.semabe-blur-popup-tempered-nordic .appmenu-application-button-selected,
+.menu.semabe-blur-popup-tempered-nordic .menu-category-button-hover,
+.menu.semabe-blur-popup-tempered-nordic .menu-category-button-selected,
+.menu.semabe-blur-popup-tempered-nordic .appmenu-category-button-selected,
+.menu.semabe-blur-popup-tempered-nordic .appmenu-category-button:hover,
+.menu.semabe-blur-popup-tempered-nordic .appmenu-sidebar-button:hover {
+  box-shadow: 1.6px 1.6px 1.2px 0px rgba(184, 205, 255, 0.4) inset;
+  border-color: rgba(4, 7, 15, 0.4);
+  border-top: 1px;
+  border-left: 1px;
+  border-right: 2px;
+  border-bottom: 2px;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(111, 124, 154, 0.3) !important;
+  background-gradient-end: rgba(111, 124, 154, 0.3) !important;
+}
+
+/* tempered glass steel */
+.menu.semabe-blur-popup-tempered-steel,
+.menu-favorites-box.popup-sub-menu.semabe-blur-popup-tempered-steel,
+.semabe-blur-popup-tempered-steel .grouped-window-list-thumbnail-menu .item-box,
+.semabe-blur-notification-tempered-steel #notification {
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(62, 62, 69, 0.4) !important;
+  background-gradient-end: rgba(62, 62, 69, 0.4) !important;
+  box-shadow: 2px 2px 1.2px 0px rgba(229, 229, 254, 0.4) inset;
+  border-color: rgba(8, 8, 10, 0.8);
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 2px;
+  border-bottom: 2px;
+  margin: 6px;
+  padding: 0px;
+}
+.semabe-blur-notification-tempered-steel #notification {
+  padding: 10px;}
+.semabe-blur-popup-tempered-steel .appmenu-applications-box {
+  background-gradient-direction: vertical;
+  background-gradient-start: transparent;
+  background-gradient-end: transparent;
+  box-shadow: none;
+  border-color: rgba(8, 8, 10, 0.0);
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: 0px;
+  padding-top: 0px;
+}
+.semabe-blur-popup-tempered-steel .appmenu-categories-applications-box {
+  padding: 6px;
+}
+.semabe-blur-popup-tempered-steel .appmenu-sidebar {
+  margin: 0px;
+  padding: 8px;
+  border-radius: 10px 0 0 10px;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(229, 229, 254, 0.3);
+  background-gradient-end: rgba(104, 104, 115, 0.3);
+  box-shadow: 2px 2px 1.2px 0px rgba(229, 229, 254, 0.4) inset;
+  border-color: rgba(8, 8, 10, 0.7);
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 1px;
+  border-bottom: 0px;
+}
+.semabe-blur-popup-tempered-steel .appmenu-search-box {
+  padding: 6px 6px 4px 6px;
+  spacing: 0;
+}
+.semabe-blur-popup-tempered-steel .menu-favorites-box,
+.semabe-blur-popup-tempered-steel .calendar {
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(229, 229, 254, 0.3);
+  background-gradient-end: rgba(104, 104, 115, 0.3);
+  box-shadow: 2px 2px 1.2px 0px rgba(229, 229, 254, 0.4) inset;
+  border-color: rgba(8, 8, 10, 0.7);
+  border-top: 1px;
+  border-left: 1px;
+  border-right: 2px;
+  border-bottom: 2px;
+}
+.semabe-blur-popup-tempered-steel .menu-categories-box,
+.semabe-blur-popup-tempered-steel .menu-applications-inner-box {
+  box-shadow: 2px 2px 1.2px 0px rgba(229, 229, 254, 0.4) inset;
+}
+.semabe-blur-popup-tempered-steel .grouped-window-list-thumbnail-menu .item-box,
+.semabe-blur-notification-tempered-steel #notification {
+  margin: 0;
+}
+.semabe-blur-popup-tempered-steel .calendar-event-button {
+  transition-duration: 0;
+  box-shadow: -2px -2px 1.1px 0px rgba(229, 229, 254, 0.25) inset;
+  border-color: rgba(8, 8, 10, 0.6);
+}
+.semabe-blur-popup-tempered-steel .calendar-event-button:hover {
+  transition-duration: 0;
+  box-shadow: 1.4px 1.4px 1.2px 0px rgba(229, 229, 254, 0.3) inset;
+  border-color: rgba(8, 8, 10, 0.5);
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 1px;
+  border-bottom: 1px;margin-top:1px;margin-left:1px;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(229, 229, 254, 0.06);
+  background-gradient-end: rgba(229, 229, 254, 0.06);
+}
+.menu.semabe-blur-popup-tempered-steel .popup-menu-item:hover,
+.menu.semabe-blur-popup-tempered-steel .popup-menu-item:active,
+.popup-menu.semabe-blur-popup-tempered-steel .popup-menu-item:hover,
+.popup-menu.semabe-blur-popup-tempered-steel .popup-menu-item:active,
+.popup-combo-menu.semabe-blur-popup-tempered-steel .popup-menu-item:hover,
+.popup-combo-menu.semabe-blur-popup-tempered-steel .popup-menu-item:active,
+.menu.semabe-blur-popup-tempered-steel .menu-favorites-button:hover,
+.menu.semabe-blur-popup-tempered-steel .menu-application-button:hover,
+.menu.semabe-blur-popup-tempered-steel .appmenu-application-button:hover,
+.menu.semabe-blur-popup-tempered-steel .menu-application-button-selected,
+.menu.semabe-blur-popup-tempered-steel .appmenu-application-button-selected,
+.menu.semabe-blur-popup-tempered-steel .menu-category-button-hover,
+.menu.semabe-blur-popup-tempered-steel .menu-category-button-selected,
+.menu.semabe-blur-popup-tempered-steel .appmenu-category-button-selected,
+.menu.semabe-blur-popup-tempered-steel .appmenu-category-button:hover,
+.menu.semabe-blur-popup-tempered-steel .appmenu-sidebar-button:hover {
+  box-shadow: 1.6px 1.6px 1.2px 0px rgba(229, 229, 254, 0.4) inset;
+  border-color: rgba(8, 8, 10, 0.4);
+  border-top: 1px;
+  border-left: 1px;
+  border-right: 2px;
+  border-bottom: 2px;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(104, 104, 115, 0.3) !important;
+  background-gradient-end: rgba(104, 104, 115, 0.3) !important;
+}
+
+/* tempered glass violet */
+.menu.semabe-blur-popup-tempered-violet,
+.menu-favorites-box.popup-sub-menu.semabe-blur-popup-tempered-violet,
+.semabe-blur-popup-tempered-violet .grouped-window-list-thumbnail-menu .item-box,
+.semabe-blur-notification-tempered-violet #notification {
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(82, 8, 82, 0.4) !important;
+  background-gradient-end: rgba(82, 8, 82, 0.4) !important;
+  box-shadow: 2px 2px 1.2px 0px rgba(255, 130, 255, 0.4) inset;
+  border-color: rgba(13, 0, 13, 0.8);
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 2px;
+  border-bottom: 2px;
+  margin: 6px;
+  padding: 0px;
+}
+.semabe-blur-notification-tempered-violet #notification {
+  padding: 10px;}
+.semabe-blur-popup-tempered-violet .appmenu-applications-box {
+  background-gradient-direction: vertical;
+  background-gradient-start: transparent;
+  background-gradient-end: transparent;
+  box-shadow: none;
+  border-color: rgba(13, 0, 13, 0.0);
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: 0px;
+  padding-top: 0px;
+}
+.semabe-blur-popup-tempered-violet .appmenu-categories-applications-box {
+  padding: 6px;
+}
+.semabe-blur-popup-tempered-violet .appmenu-sidebar {
+  margin: 0px;
+  padding: 8px;
+  border-radius: 10px 0 0 10px;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255, 130, 255, 0.3);
+  background-gradient-end: rgba(143, 74, 143, 0.3);
+  box-shadow: 2px 2px 1.2px 0px rgba(255, 130, 255, 0.4) inset;
+  border-color: rgba(13, 0, 13, 0.7);
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 1px;
+  border-bottom: 0px;
+}
+.semabe-blur-popup-tempered-violet .appmenu-search-box {
+  padding: 6px 6px 4px 6px;
+  spacing: 0;
+}
+.semabe-blur-popup-tempered-violet .menu-favorites-box,
+.semabe-blur-popup-tempered-violet .calendar {
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255, 130, 255, 0.3);
+  background-gradient-end: rgba(143, 74, 143, 0.3);
+  box-shadow: 2px 2px 1.2px 0px rgba(255, 130, 255, 0.4) inset;
+  border-color: rgba(13, 0, 13, 0.7);
+  border-top: 1px;
+  border-left: 1px;
+  border-right: 2px;
+  border-bottom: 2px;
+}
+.semabe-blur-popup-tempered-violet .menu-categories-box,
+.semabe-blur-popup-tempered-violet .menu-applications-inner-box {
+  box-shadow: 2px 2px 1.2px 0px rgba(255, 130, 255, 0.4) inset;
+}
+.semabe-blur-popup-tempered-violet .grouped-window-list-thumbnail-menu .item-box,
+.semabe-blur-notification-tempered-violet #notification {
+  margin: 0;
+}
+.semabe-blur-popup-tempered-violet .calendar-event-button {
+  transition-duration: 0;
+  box-shadow: -2px -2px 1.1px 0px rgba(255, 130, 255, 0.25) inset;
+  border-color: rgba(13, 0, 13, 0.6);
+}
+.semabe-blur-popup-tempered-violet .calendar-event-button:hover {
+  transition-duration: 0;
+  box-shadow: 1.4px 1.4px 1.2px 0px rgba(255, 130, 255, 0.3) inset;
+  border-color: rgba(13, 0, 13, 0.5);
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 1px;
+  border-bottom: 1px;margin-top:1px;margin-left:1px;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255, 130, 255, 0.06);
+  background-gradient-end: rgba(255, 130, 255, 0.06);
+}
+.menu.semabe-blur-popup-tempered-violet .popup-menu-item:hover,
+.menu.semabe-blur-popup-tempered-violet .popup-menu-item:active,
+.popup-menu.semabe-blur-popup-tempered-violet .popup-menu-item:hover,
+.popup-menu.semabe-blur-popup-tempered-violet .popup-menu-item:active,
+.popup-combo-menu.semabe-blur-popup-tempered-violet .popup-menu-item:hover,
+.popup-combo-menu.semabe-blur-popup-tempered-violet .popup-menu-item:active,
+.menu.semabe-blur-popup-tempered-violet .menu-favorites-button:hover,
+.menu.semabe-blur-popup-tempered-violet .menu-application-button:hover,
+.menu.semabe-blur-popup-tempered-violet .appmenu-application-button:hover,
+.menu.semabe-blur-popup-tempered-violet .menu-application-button-selected,
+.menu.semabe-blur-popup-tempered-violet .appmenu-application-button-selected,
+.menu.semabe-blur-popup-tempered-violet .menu-category-button-hover,
+.menu.semabe-blur-popup-tempered-violet .menu-category-button-selected,
+.menu.semabe-blur-popup-tempered-violet .appmenu-category-button-selected,
+.menu.semabe-blur-popup-tempered-violet .appmenu-category-button:hover,
+.menu.semabe-blur-popup-tempered-violet .appmenu-sidebar-button:hover {
+  box-shadow: 1.6px 1.6px 1.2px 0px rgba(255, 130, 255, 0.4) inset;
+  border-color: rgba(13, 0, 13, 0.4);
+  border-top: 1px;
+  border-left: 1px;
+  border-right: 2px;
+  border-bottom: 2px;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(143, 74, 143, 0.3) !important;
+  background-gradient-end: rgba(143, 74, 143, 0.3) !important;
+}
+
+.semabe-blur-popup-tempered-azure StScrollView.vfade,
+.semabe-blur-popup-tempered-cinnamon StScrollView.vfade,
+.semabe-blur-popup-tempered-crimson StScrollView.vfade,
+.semabe-blur-popup-tempered-falcon StScrollView.vfade,
+.semabe-blur-popup-tempered-grey StScrollView.vfade,
+.semabe-blur-popup-tempered-mint StScrollView.vfade,
+.semabe-blur-popup-tempered-nordic StScrollView.vfade,
+.semabe-blur-popup-tempered-steel StScrollView.vfade,
+.semabe-blur-popup-tempered-violet StScrollView.vfade{
+  -st-vfade-offset: 20px; }
+
+

@@ -1,0 +1,10 @@
+{
+    "uuid": "semabe-theme-blur@sewbej",
+    "name": "Semabe Theme Blur",
+    "description": "Adds blur to semi-transparent pop-up windows.",
+    "url": "https://github.com/sewbej/semabe",
+    "cinnamon-version": [ "6.4", "6.6" ],
+    "version": "1.0",
+    "author": "sewbej",
+    "icon": "preferences-desktop-theme"
+}

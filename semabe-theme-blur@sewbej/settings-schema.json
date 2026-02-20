@@ -1,0 +1,52 @@
+{
+    "section-blur": {
+        "type": "section",
+        "description": "Blur"
+    },
+    "backgd-blur-menus": {
+      "type": "switch",
+      "default": true,
+      "description": "Popup menus"
+    },
+    "backgd-blur-notifications": {
+      "type": "switch",
+      "default": true,
+      "description": "Notifications"
+    },
+    "backgd-blur-level": {
+        "type": "scale",
+        "default": 6,
+        "min": 1,
+        "max": 24,
+        "step": 1,
+        "description": "Blur strength"
+    },
+    "use-theme-colors": {
+        "type": "combobox",
+        "default": "Simple blur",
+        "description": "Surface style",
+        "options": {
+            "Simple blur": "disabled",
+            "Glass pane": "pane",
+            "Tempered glass": "tempered"
+        }
+    },
+    "section-dim": {
+        "type": "section",
+        "description": "Dimming"
+    },
+    "backgd-dim": {
+      "type": "switch",
+      "default": true,
+      "description": "Enable background dimming for dialog boxes"
+    },
+    "backgd-dim-level": {
+        "type": "scale",
+        "default": 7,
+        "min": 1,
+        "max": 9,
+        "step": 1,
+        "dependency": "backgd-dim",
+        "description": "Dimming level"
+    }
+}
