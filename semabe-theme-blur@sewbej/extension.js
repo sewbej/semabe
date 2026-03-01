@@ -3,12 +3,10 @@ const Gio = imports.gi.Gio;
 const St = imports.gi.St;
 const Main = imports.ui.main;
 const PopupMenu = imports.ui.popupMenu;
-const ModalDialog = imports.ui.modalDialog;
 const Settings = imports.ui.settings;
 const Clutter = imports.gi.Clutter;
 
-const refresh_rate = 64;
-const BR_radius = 12;
+const refresh_rate = 32;    // Blur refresh rate in milliseconds
 
 class SemabeGlassDesigner {
 	constructor(metadata) {
@@ -23,12 +21,10 @@ class SemabeGlassDesigner {
 		this._themeHandlerId = this._desktopSettings.connect('changed::name', () => {
 			let currentTheme = this._desktopSettings.get_string('name');
 			this._updateGlassShadeFromTheme(currentTheme);
-			// Log do testów (można usunąć przed publikacją)
-			Main.notify("Semabe Glass Designer", `Aktywny odcień: ${this.glassShade}`);
+		//	Main.notify("Semabe Glass Blur", `Theme color: ${this.glassShade}`);
 			this._updateColorClassesOnExisting();
 		});
 
-		this._modalSignalId = 0;
 		this._uiGroupSignalId = 0;
 		this._origPopupMenuOpen = null;
 		this._origPopupMenuClose = null;
@@ -42,15 +38,12 @@ class SemabeGlassDesigner {
 	_bindSettings() {
 		this._settings.bind("backgd-blur-menus", "backgdBlurMenus");
 		this._settings.bind("backgd-blur-notifications", "backgdBlurNotifications");
-		this._settings.bind("backgd-dim", "backgdDimEnabled");
-		this._settings.bind("backgd-blur-level", "bgBlurLevel");
-		this._settings.bind("backgd-dim-level", "bgDimLevel");
-		this._settings.bind("use-theme-colors", "useThemeColors");
+		this._settings.bind("backgd-blur-strength", "bgBlurStrength");
+		this._settings.bind("surface-style", "surfaceStyle");
 
-		this._settings.connect("changed::use-theme-colors", () => this._updateColorClassesOnExisting());
+		this._settings.connect("changed::surface-style", () => this._updateColorClassesOnExisting());
 		this._settings.connect("changed::backgd-blur-menus", () => this._updatePatches());
 		this._settings.connect("changed::backgd-blur-notifications", () => this._updatePatches());
-		this._settings.connect("changed::backgd-dim", () => this._updatePatches());
 	}
 
 	_updateGlassShadeFromTheme(themeName) {
@@ -102,14 +95,6 @@ class SemabeGlassDesigner {
 			});
 		}
 
-		if (this.backgdDimEnabled) {
-			this._patchModalDialogs();
-			this._applyDimToExisting();
-		} else {
-			this._unpatchModalDialogs();
-			this._clearExistingModalStyles();
-		}
-
 		this._updateColorClassesOnExisting();
 	}
 
@@ -118,9 +103,9 @@ class SemabeGlassDesigner {
 
 		this._removeStylerClassesOnly(actor);
 
-		if (this.useThemeColors === "pane") {
+		if (this.surfaceStyle === "pane") {
 			actor.add_style_class_name(`${baseName}-pane-${this.glassShade}`);
-		} else if (this.useThemeColors === "tempered") {
+		} else if (this.surfaceStyle === "tempered") {
 			actor.add_style_class_name(`${baseName}-tempered-${this.glassShade}`);
 		}
 
@@ -196,8 +181,8 @@ class SemabeGlassDesigner {
 			if (!actor || actor.is_finalized?.()) return;
 			this._applyColorClass(actor, 'semabe-blur-popup');
 			actor.set_style(`
-            background-blur: ${this.bgBlurLevel}px; 
-            border-radius: ${BR_radius}px;
+            background-blur: ${this.bgBlurStrength}px; 
+            border-radius: 12px;
         `);
 		};
 
@@ -262,8 +247,8 @@ class SemabeGlassDesigner {
 
 		actor.set_style(`
         background-color: transparent !important;
-        background-blur: ${this.bgBlurLevel}px;
-        border-radius: ${BR_radius}px;
+        background-blur: ${this.bgBlurStrength}px;
+        border-radius: 12px;
         margin: 0px !important;
     `);
 
@@ -303,7 +288,7 @@ class SemabeGlassDesigner {
 		PopupMenu.PopupMenu.prototype.open = function(animate) {
 			self._origPopupMenuOpen.call(this, animate);
 			self._applyColorClass(this.actor, 'semabe-blur-popup');
-			this.actor.set_style(`background-blur: ${self.bgBlurLevel}px; border-radius: ${BR_radius}px;`);
+			this.actor.set_style(`background-blur: ${self.bgBlurStrength}px; border-radius: 12px;`);
 
 			this.actor.set_translation(0, 0, 1);
 			if (this.box) this.box.set_translation(0, 0, -1);
@@ -350,43 +335,6 @@ class SemabeGlassDesigner {
 		}
 	}
 
-	_patchModalDialogs() {
-		if (this._modalSignalId) return;
-		this._modalSignalId = Main.uiGroup.connect('actor-added', (container, actor) => {
-			if (this.backgdDimEnabled) this._applyDimToActor(actor);
-		});
-	}
-
-	_applyDimToActor(actor) {
-		let actorStr = actor.toString().toLowerCase();
-		if (actorStr.includes('dialog') || actorStr.includes('prompt')) {
-			actor.set_style(`background-color: rgba(0, 0, 0, 0.${this.bgDimLevel}) !important;`);
-		}
-	}
-
-	_applyDimToExisting() {
-		Main.uiGroup.get_children().forEach(actor => this._applyDimToActor(actor));
-	}
-
-	_clearExistingModalStyles() {
-		Main.uiGroup.get_children().forEach(actor => {
-			if (!actor || actor.is_finalized?.()) return;
-
-			let actorStr = actor.toString().toLowerCase();
-			if (actorStr.includes('dialog') || actorStr.includes('prompt') || actorStr.includes('modal')) {
-				actor.set_style(null);
-			}
-		});
-	}
-
-	_unpatchModalDialogs() {
-		if (this._modalSignalId) {
-			Main.uiGroup.disconnect(this._modalSignalId);
-			this._modalSignalId = 0;
-		}
-		this._clearExistingModalStyles();
-	}
-
 	destroy() {
 		if (this._themeHandlerId) {
 			this._desktopSettings.disconnect(this._themeHandlerId);
@@ -394,7 +342,6 @@ class SemabeGlassDesigner {
 
 		this._unpatchPopupMenu();
 		this._unpatchNotifications();
-		this._unpatchModalDialogs();
 		this._unpatchAllMenus();
 
 		Main.uiGroup.get_children().forEach(actor => {
