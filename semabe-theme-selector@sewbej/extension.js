@@ -27,59 +27,56 @@ class ThemeSelectorExtension {
         this.iconThemeChangedId = null;
 
         Gettext.bindtextdomain(meta.uuid, GLib.get_home_dir() + "/.local/share/locale");
+        this._isUpdating = false;
     }
 
-enable() {
-    this.settings = new Settings.ExtensionSettings(this, this.meta.uuid);
+    enable() {
+        this.settings = new Settings.ExtensionSettings(this, this.meta.uuid);
 
-    this.settings.bind("color", "color", this.onSettingsChanged.bind(this));
-    this.settings.bind("transparency", "transparency", this.onSettingsChanged.bind(this));
-    this.settings.bind("window-controls", "windowControls", this.onSettingsChanged.bind(this));
-    this.settings.bind("color-cinn", "colorCinn", this.onSettingsChanged.bind(this));
-    this.settings.bind("transparency-cinn", "transparencyCinn", this.onSettingsChanged.bind(this));
-    this.settings.bind("window-controls", "windowControlsCinn", this.onSettingsChanged.bind(this));
-    this.settings.bind("controls-style", "controlsstyle", this.onSettingsChanged.bind(this));
-    this.settings.bind("arrows-style", "arrowsstyle", this.onSettingsChanged.bind(this));
-    this.settings.bind("size1", "size1", this.onSettingsChanged.bind(this));
-    this.settings.bind("size2", "size2", this.onSettingsChanged.bind(this));
-    this.settings.bind("size3", "size3", this.onSettingsChanged.bind(this));
-    this.settings.bind("size4", "size4", this.onSettingsChanged.bind(this));
-    this.settings.bind("size5", "size5", this.onSettingsChanged.bind(this));
-    this.settings.bind("size6", "size6", this.onSettingsChanged.bind(this));
-    this.settings.bind("size7", "size7", this.onSettingsChanged.bind(this));
+        this.settings.bind("color", "color", this.onSettingsChanged.bind(this));
+        this.settings.bind("transparency", "transparency", this.onSettingsChanged.bind(this));
+        this.settings.bind("window-controls", "windowControls", this.onSettingsChanged.bind(this));
+        this.settings.bind("color-cinn", "colorCinn", this.onSettingsChanged.bind(this));
+        this.settings.bind("transparency-cinn", "transparencyCinn", this.onSettingsChanged.bind(this));
+        this.settings.bind("window-controls", "windowControlsCinn", this.onSettingsChanged.bind(this));
+        this.settings.bind("controls-style", "controlsstyle", this.onSettingsChanged.bind(this));
+        this.settings.bind("arrows-style", "arrowsstyle", this.onSettingsChanged.bind(this));
+        this.settings.bind("size1", "size1", this.onSettingsChanged.bind(this));
+        this.settings.bind("size2", "size2", this.onSettingsChanged.bind(this));
+        this.settings.bind("size3", "size3", this.onSettingsChanged.bind(this));
+        this.settings.bind("size4", "size4", this.onSettingsChanged.bind(this));
+        this.settings.bind("size5", "size5", this.onSettingsChanged.bind(this));
+        this.settings.bind("size6", "size6", this.onSettingsChanged.bind(this));
+        this.settings.bind("size7", "size7", this.onSettingsChanged.bind(this));
 
         this._updateUnifiedSize();
-    // Auto-detect targetDir if empty
-    if (!this.targetDir || this.targetDir.trim() === "") {
-      const detected = getCurrentIconTheme();
-      if (detected) {
-        this.targetDir = detected;
-        if (this.settings && typeof this.settings.set_string === "function") {
-          this.settings.set_string("directory-select", detected);
-        }
-        //Main.notify("Semabe Theme Selector", `Detected current icon theme: ${detected}`);
-      }
-    }
-    // Listen for changes to the system icon theme
-    this.iconThemeChangedId = this.interfaceSettings.connect("changed::icon-theme", () => {
-        const newTheme = this.interfaceSettings.get_string("icon-theme");
-        if (newTheme && newTheme !== this.targetDir) {
-            this.targetDir = newTheme;
-            if (this.settings && typeof this.settings.set_string === "function") {
-                this.settings.set_string("directory-select", newTheme);
+
+        if (!this.targetDir || this.targetDir.trim() === "") {
+            const detected = this.interfaceSettings.get_string("icon-theme");
+            if (detected) {
+                this.targetDir = detected;
+                if (this.settings && typeof this.settings.set_string === "function") {
+                    this.settings.set_string("directory-select", detected);
+                }
             }
-            //Main.notify("Semabe Theme Selector", `Detected icon theme change: ${newTheme}`);
         }
-    });
+
+        this.iconThemeChangedId = this.interfaceSettings.connect("changed::icon-theme", () => {
+            const newTheme = this.interfaceSettings.get_string("icon-theme");
+            if (newTheme && newTheme !== this.targetDir) {
+                this.targetDir = newTheme;
+                if (this.settings && typeof this.settings.set_string === "function") {
+                    this.settings.set_string("directory-select", newTheme);
+                }
+            }
+        });
 
         const themeName = this.buildThemeName();
         const themeNameCinn = this.buildThemeNameCinn();
         this.applyTheme(themeName, themeNameCinn);
 
         this.wmSettingsChangedId = this.wmSettings.connect("changed::button-layout", () => {
-            const updatedGtk = this.buildThemeName();
-            const updatedCinn = this.buildThemeNameCinn();
-            this.applyTheme(updatedGtk, updatedCinn);
+            this.onSettingsChanged();
         });
     }
 
@@ -88,14 +85,13 @@ enable() {
             this.wmSettings.disconnect(this.wmSettingsChangedId);
             this.wmSettingsChangedId = null;
         }
-        if (this.settings && this.settings.finalize)
-            this.settings.finalize();
-        this.settings = null;
         if (this.iconThemeChangedId && this.interfaceSettings) {
             this.interfaceSettings.disconnect(this.iconThemeChangedId);
             this.iconThemeChangedId = null;
         }
-
+        if (this.settings && this.settings.finalize)
+            this.settings.finalize();
+        this.settings = null;
     }
 
     _validateSize() {
@@ -117,19 +113,13 @@ enable() {
             if (!availableSizes.includes(size)) {
                 this.size = "L";
                 if (this.settings && typeof this.settings.set_string === "function") {
-                    this.settings.set_string("size", "L");
+                    this.settings.set_string("size1", "L"); 
                 }
 
                 Main.notify(
-                    `Unsupported size "${size}" for style "${windowControls}".`,
-                    `Size has been reset to "L".`
+                    _("Theme Selector"),
+                    _(`Size "${size}" not supported for "${windowControls}". Reset to "L".`)
                 );
-
-                GLib.spawn_command_line_async("pkill -f xlet-settings");
-                GLib.timeout_add_seconds(GLib.PRIORITY_DEFAULT, 0, () => {
-                    GLib.spawn_command_line_async("xlet-settings extension semabe-theme-selector@sewbej");
-                    return GLib.SOURCE_REMOVE;
-                });
             }
         }
     }
@@ -153,27 +143,18 @@ enable() {
     }
 
     onSettingsChanged() {
-        if (this._updatingSize) return;
-        this._updatingSize = true;
+        if (this._isUpdating) return;
 
-        switch (this.windowControls) {
-            case "legacy": this.size = this.size1; break;
-            case "ambiance": this.size = this.size2; break;
-            case "macOS": this.size = this.size3; break;
-            case "breeze": this.size = this.size4; break;
-            case "LED": this.size = this.size5; break;
-            case "zephyr": this.size = this.size6; break;
-            case "human": this.size = this.size7; break;
-            default: this.size = "L"; break;
-        }
-
-        this._updatingSize = false;
-
+        this._isUpdating = true;
+    
+        this._updateUnifiedSize();
         this._validateSize();
 
         const themeName = this.buildThemeName();
         const themeNameCinn = this.buildThemeNameCinn();
         this.applyTheme(themeName, themeNameCinn);
+    
+        this._isUpdating = false;
     }
 
     buildThemeName() {
@@ -183,17 +164,13 @@ enable() {
     }
 
     buildThemeNameCinn() {
-        const layoutSuffix = "R";
-        const sizeSuffix = "L";
-        return `Semabe ${this.colorCinn} ${this.transparencyCinn} (${this.windowControlsCinn})${sizeSuffix}${layoutSuffix}`;
+        return `Semabe ${this.colorCinn} ${this.transparencyCinn} (${this.windowControlsCinn})LR`;
     }
 
     buildThemePath(themeName) {
-        const layoutRaw = GLib.spawn_command_line_sync(
-            "gsettings get org.cinnamon.desktop.wm.preferences button-layout"
-        )[1].toString().trim().replace(/'/g, "");
-
+        const layoutRaw = this.wmSettings.get_string("button-layout");
         const layoutSuffix = this.mapLayoutToLetter(layoutRaw);
+        
         const layoutMap = { R: "right", L: "left", M: "classic_mac", G: "gnome" };
         const layoutName = layoutMap[layoutSuffix] || "right";
 
@@ -204,12 +181,11 @@ enable() {
 
         const windowControls = this.windowControls || "legacy";
         const classicThemes = ["macOS", "breeze", "human"];
-        const legacyTheme = "legacy";
 
         let path;
         let finalThemeName = themeName;
 
-        if (windowControls === legacyTheme) {
+        if (windowControls === "legacy") {
             finalThemeName = themeName.replace(/[RLMG]$/, "").replace(/(S|M|L|XL|XXL)$/, "");
             path = `semabe/${windowControls}/${finalThemeName}`;
         } else if (classicThemes.includes(windowControls)) {
@@ -227,12 +203,11 @@ enable() {
         const sizeName = "large";
         const windowControls = this.windowControlsCinn || "legacy";
         const classicThemes = ["macOS", "breeze", "human"];
-        const legacyTheme = "legacy";
 
         let pathCinn;
         let finalThemeNameCinn = themeNameCinn;
 
-        if (windowControls === legacyTheme) {
+        if (windowControls === "legacy") {
             finalThemeNameCinn = themeNameCinn.replace(/[RLMG]$/, "").replace(/(S|M|L|XL|XXL)$/, "");
             pathCinn = `semabe/${windowControls}/${finalThemeNameCinn}`;
         } else if (classicThemes.includes(windowControls)) {
@@ -261,168 +236,100 @@ enable() {
         if (layout.includes("close")) return "G";
         return "R";
     }
-    /**
-     * Safely get a string setting from the extension settings.
-     * Tries several fallbacks because different Cinnamon versions expose ExtensionSettings differently.
-     * Returns defaultValue if not found.
-     */
-    getSettingString(key, defaultValue = "") {
-        try {
-            // 1) If the ExtensionSettings wrapper exposes get_string directly (some versions)
-            if (this.settings && typeof this.settings.get_string === "function") {
-                return this.settings.get_string(key);
-            }
-
-            // 2) If ExtensionSettings stores the underlying Gio.Settings in a private field (common pattern)
-            if (this.settings && this.settings._settings && typeof this.settings._settings.get_string === "function") {
-                return this.settings._settings.get_string(key);
-            }
-
-            // 3) As a last resort, try to build a Gio.Settings with the extension schema id.
-            //    The schema name can vary — try common patterns. Adjust schemaName if you know it.
-            const possibleSchemas = [
-                this.meta && this.meta.uuid ? `org.cinnamon.extensions.${this.meta.uuid}` : null,
-                this.meta && this.meta.uuid ? `${this.meta.uuid}` : null,
-                "org.cinnamon.shell.extensions.semabe-theme-selector", // fallback guesses
-            ].filter(Boolean);
-
-            for (let schemaName of possibleSchemas) {
-                try {
-                    const s = new Gio.Settings({ schema: schemaName });
-                    if (s && typeof s.get_string === "function") {
-                        return s.get_string(key);
-                    }
-                } catch (e) {
-                    // schema not found — ignore and continue
-                }
-            }
-        } catch (e) {
-            global.logError(e);
-        }
-
-        return defaultValue;
-    }
 
     applyTheme(themeGtk, themeCinn) {
         const path = this.buildThemePath(themeGtk);
         const pathCinn = this.buildThemePathCinn(themeCinn);
-        const globalPath = `${GLib.get_home_dir()}/.local/share/flatpak/overrides/global`;
+        const scriptPath = `${GLib.get_home_dir()}/.local/share/cinnamon/extensions/${UUID}/flatpak.py`;
 
-        Util.spawnCommandLine(`gsettings set org.cinnamon.desktop.interface gtk-theme "${path}"`);
-        Util.spawnCommandLine(`gsettings set org.cinnamon.theme name "${pathCinn}"`);
+        this.interfaceSettings.set_string("gtk-theme", path);
+        new Gio.Settings({ schema: "org.cinnamon.theme" }).set_string("name", pathCinn);
 
-        const bashScript = `
-        FILE="${globalPath}"
-        sed -i -E "s|^filesystems=.*|filesystems=~/.themes;/usr/share/themes|" "$FILE"
-        sed -i -E "s|^GTK_THEME=.*|GTK_THEME=${path}|" "$FILE"
-        `;
-
-        GLib.spawn_async(null, ["/bin/bash", "-c", bashScript], null, GLib.SpawnFlags.SEARCH_PATH, null);
+        let proc = Gio.Subprocess.new(
+            ["python3", scriptPath, path],
+            Gio.SubprocessFlags.NONE
+        );
+        
+        proc.wait_async(null, (p, res) => {
+            try {
+                p.wait_finish(res);
+            } catch (e) {
+                global.logError("Error during Flatpak theme update: " + e);
+            }
+        });
     }
-}
-
-function getCurrentIconTheme() {
-    const s = new Gio.Settings({ schema: ICON_SCHEMA });
-    return s.get_string("icon-theme") || "";
-}
-
-function refreshIconTheme(targetDir) {
-    const command = `bash -c " \
-      gsettings set org.cinnamon.desktop.interface icon-theme ''; \
-      sleep 0.3; \
-      gsettings set org.cinnamon.desktop.interface icon-theme '${targetDir}' \
-    "`;
-    Util.spawnCommandLine(command);
-    global.log(`Icon theme refreshed: '${targetDir}'`);
 }
 
 function runThemeScript(mode, style, targetDir) {
-  try {
     const homeDir = GLib.get_home_dir();
-    const scriptPath = `${homeDir}/.local/share/cinnamon/extensions/semabe-theme-selector@sewbej/replace_symbolic_icon.py`;
+    const scriptPath = `${homeDir}/.local/share/cinnamon/extensions/${UUID}/replace_symbolic_icon.py`;
 
-    if (!targetDir || targetDir.trim() === "") {
-      targetDir = getCurrentIconTheme() || "";
-      if (!targetDir) {
-        Main.notifyError("Semabe Theme Selector", "❌ No icon theme detected or selected!");
-        return;
-      }
-      //Main.notify("Semabe Theme Selector", `Auto-detected icon theme: ${targetDir}`);
+    if (!targetDir) {
+        const s = new Gio.Settings({ schema: ICON_SCHEMA });
+        targetDir = s.get_string("icon-theme");
     }
 
-    const scriptFile = Gio.File.new_for_path(scriptPath);
-    if (!scriptFile.query_exists(null)) {
-      Main.notifyError("Semabe Theme Selector", `Script not found:\n${scriptPath}`);
-      return;
+    try {
+        let proc = Gio.Subprocess.new(
+            ["python3", scriptPath, mode, style, targetDir],
+            Gio.SubprocessFlags.NONE
+        );
+        
+        proc.wait_async(null, (p, res) => {
+            if (p.wait_finish(res)) {
+                refreshIconTheme(targetDir);
+            }
+        });
+    } catch (e) {
+        global.logError(e);
     }
+}
 
-    const proc = new Gio.Subprocess({
-      argv: ["/usr/bin/python3", scriptPath, mode, style, targetDir],
-      flags: Gio.SubprocessFlags.STDOUT_PIPE | Gio.SubprocessFlags.STDERR_PIPE,
+function refreshIconTheme(targetDir) {
+    const s = new Gio.Settings({ schema: ICON_SCHEMA });
+    s.set_string("icon-theme", "");
+    GLib.timeout_add(GLib.PRIORITY_DEFAULT, 300, () => {
+        s.set_string("icon-theme", targetDir);
+        return GLib.SOURCE_REMOVE;
     });
+}
 
-    proc.init(null);
-    proc.communicate_utf8_async(null, null, (self, res) => {
-      try {
-        const [, stdoutStr, stderrStr] = proc.communicate_utf8_finish(res);
-        const exitOk = proc.get_successful();
-        const out = (stdoutStr || "").trim();
-        const err = (stderrStr || "").trim();
-
-        if (exitOk) {
-          Main.notify("Semabe Theme Selector", out || "✅ Done!");
-          refreshIconTheme(targetDir);
-        } else {
-          Main.notifyError("Semabe Theme Selector", `❌ Script failed${err ? `:\n${err}` : "."}`);
-        }
-      } catch (e) {
-        Main.notifyError("Semabe Theme Selector", `Exception: ${e.message}`);
-      }
-    });
-  } catch (e) {
-    Main.notifyError("Semabe Theme Selector", `Exception: ${e.message}`);
-  }
+function openWebsite(url) {
+    Util.spawnCommandLine("xdg-open " + url);
 }
 
 var Callbacks = {
-  btn_controls_pressed: function () {
-    runThemeScript("controls", extension.controlsstyle, extension.targetDir);
-  },
-
-  btn_arrows_pressed: function () {
-    runThemeScript("arrows", extension.arrowsstyle, extension.targetDir);
-  },
-
-  btn_restore_pressed: function () {
-    runThemeScript("restore", "-", extension.targetDir);
-  },
+    btn_controls_pressed: function () {
+        runThemeScript("controls", this.controlsstyle, this.targetDir);
+    },
+    btn_arrows_pressed: function () {
+        runThemeScript("arrows", this.arrowsstyle, this.targetDir);
+    },
+    btn_restore_pressed: function () {
+        runThemeScript("restore", "-", this.targetDir);
+    },
+    btn_website_pressed: function () {
+        openWebsite("https://www.cinnamon-look.org/p/2025684");
+    },
 };
 
-
 let extension = null;
-let signalManager = null;
 
 function init(metadata) {
     extension = new ThemeSelectorExtension(metadata);
-    signalManager = new SignalManager.SignalManager(null);
 }
 
 function enable() {
     extension.enable();
 
+    let boundCallbacks = {};
     Object.keys(Callbacks).forEach(k => {
-        Callbacks[k] = Callbacks[k].bind(extension);
+        boundCallbacks[k] = Callbacks[k].bind(extension);
     });
-    return Callbacks;
+    return boundCallbacks;
 }
 
 function disable() {
     extension.disable();
-
-    if (signalManager && typeof signalManager.disconnectAllSignals === "function") {
-        try { signalManager.disconnectAllSignals(); } catch (e) {}
-    }
-    signalManager = null;
     extension = null;
 }
-

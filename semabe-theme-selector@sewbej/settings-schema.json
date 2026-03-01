@@ -1,7 +1,7 @@
 {
   "layout1": {
     "type": "layout",
-    "pages": ["page1", "page2"],
+    "pages": ["page1", "page2", "page3"],
 
     "page1": {
       "type": "page",
@@ -14,6 +14,12 @@
       "title": "Symbolic icons",
       "sections": ["section-directory", "section-controls", "section-arrows", "section-restore"]
     },
+
+      "page3" : {
+         "type" : "page",
+         "title" : "About",
+         "sections" : ["about-section"]
+      },
 
     "section-gtk": {
       "type": "section",
@@ -61,7 +67,13 @@
       "type": "section",
       "title": "Restore",
       "keys": ["restore_btn"]
-    }
+    },
+      "about-section" : {
+         "type" : "section",
+         "title" : "",
+         "keys" : ["about-text", "website_btn"]
+      }
+   
   },
 
   "label-info": {
@@ -88,7 +100,7 @@
 
   "transparency": {
     "type": "combobox",
-    "default": "Opaque",
+    "default": "Glassy",
     "description": "Transparency level",
     "options": {
       "Glassy": "Glassy",
@@ -116,7 +128,7 @@
 
   "transparency-cinn": {
     "type": "combobox",
-    "default": "Opaque",
+    "default": "Glassy",
     "description": "Transparency level",
     "options": {
       "Glassy": "Glassy",
@@ -261,6 +273,15 @@
         "type": "button",
         "description": "Restore original icons",
         "callback": "btn_restore_pressed"
+    },
+   "about-text": {
+      "type" : "label",
+      "description" : "Semabe Theme Selector\n\nversion: 3.6"
+   },
+    "website_btn": {
+        "type": "button",
+        "description": "Website",
+        "callback": "btn_website_pressed"
     }
 }
 

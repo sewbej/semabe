@@ -1,9 +1,9 @@
 {
   "uuid": "semabe-theme-selector@sewbej",
   "name": "Semabe Theme Selector",
-  "description": "Selects semabe themes.",
+  "description": "Facilitates the selection of a scheme.",
   "url": "https://github.com/sewbej/semabe",
-  "version": "3.5.1",
+  "version": "3.6",
   "author": "sewbej",
   "icon": "preferences-desktop-theme",
   "cinnamon-version": ["6.4", "6.6"]

@@ -67,16 +67,14 @@ def replace_many(source_dir: Path, target_dir: Path, names: list[str]):
                 ensure_backup_once(dest)
 
             try:
-                # Kopiowanie głównego pliku
                 shutil.copy2(src, dest)
                 
-                # TWORZENIE DUPLIKATU XSI-
                 xsi_dest = dest.parent / (XSI_PREFIX + dest.name)
                 shutil.copy2(src, xsi_dest)
                 
                 replaced += 1
             except Exception as e:
-                print(f"Błąd podczas kopiowania {name}: {e}")
+                zenity_error(f"Error during copying {name}: {e}")
 
     return replaced
 
@@ -295,7 +293,7 @@ def main():
     if mode == "restore":
         confirmed = preview_icons(title, header, Path("."), [], target_dir, show_icons=False)
         if not confirmed:
-            print("🟥 Operation canceled by user.")
+            zenity_error("Operation canceled by user.")
             sys.exit(0)
 
         restored = 0
@@ -317,11 +315,9 @@ def main():
                         except Exception:
                             pass
                 if removed > 0:
-                    print(f"🗑️ Removed {removed} files from {adwaita_dir}")
                     restored = removed
 
         if restored > 0:
-            print(f"✅ Restored {restored} files.")
             sys.exit(0)
         else:
             zenity_error("No backup files (.semabe.bak) found to restore.")
@@ -333,7 +329,7 @@ def main():
 
     confirmed = preview_icons(title, header, source_dir, preview_names, target_dir)
     if not confirmed:
-        print("🟥 Operation canceled by user.")
+        zenity_error("Operation canceled by user.")
         sys.exit(0)
 
     alt = ensure_local_copy(target, all_names, source_dir)
@@ -345,7 +341,6 @@ def main():
     replaced = replace_many(source_dir, target_dir, all_names)
     
     if replaced > 0:
-        print(f"✅ Replaced {replaced} files.")
         sys.exit(0)
     else:
         zenity_error(f"No matching files found in:\n{target_dir}")
