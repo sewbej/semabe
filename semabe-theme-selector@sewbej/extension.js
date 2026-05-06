@@ -4,7 +4,6 @@ const GLib = imports.gi.GLib;
 const Gio = imports.gi.Gio;
 const Main = imports.ui.main;
 const Settings = imports.ui.settings;
-const Util = imports.misc.util;
 const SignalManager = imports.misc.signalManager;
 const ICON_SCHEMA = "org.cinnamon.desktop.interface";
 
@@ -294,10 +293,6 @@ function refreshIconTheme(targetDir) {
     });
 }
 
-function openWebsite(url) {
-    Util.spawnCommandLine("xdg-open " + url);
-}
-
 var Callbacks = {
     btn_controls_pressed: function () {
         runThemeScript("controls", this.controlsstyle, this.targetDir);
@@ -309,7 +304,7 @@ var Callbacks = {
         runThemeScript("restore", "-", this.targetDir);
     },
     btn_website_pressed: function () {
-        openWebsite("https://www.cinnamon-look.org/p/2025684");
+        Gio.app_info_launch_default_for_uri("https://www.cinnamon-look.org/p/2025684", null);
     },
 };
 
