@@ -1,34 +1,188 @@
 {
-    "section-blur": {
-        "type": "section",
-        "description": "Blur"
+  "layout": {
+    "type": "layout",
+    "pages": [
+      "page1",
+      "page2"
+    ],
+    "page1": {
+      "type": "page",
+      "title": "Settings",
+      "sections": [
+        "section-general",
+        "section-menus",
+        "section-notifications"
+      ]
     },
-    "backgd-blur-menus": {
-      "type": "switch",
-      "default": true,
-      "description": "Popup menus"
+    "page2": {
+      "type": "page",
+      "title": "About",
+      "sections": [
+        "section-about"
+      ]
     },
-    "backgd-blur-notifications": {
-      "type": "switch",
-      "default": true,
-      "description": "Notifications"
+    "section-general": {
+      "type": "section",
+      "title": "Enable settings",
+      "keys": [
+        "backgd-blur-menus",
+        "backgd-blur-notifications"
+      ]
     },
-    "backgd-blur-strength": {
-        "type": "scale",
-        "default": 6,
-        "min": 1,
-        "max": 24,
-        "step": 1,
-        "description": "Blur strength"
+    "section-menus": {
+      "type": "section",
+      "title": "Popup menus",
+      "dependency": "backgd-blur-menus",
+      "keys": [
+        "surface-style-menus",
+        "light-refraction-menus",
+        "backgd-blur-strength-menus"
+      ]
     },
-    "surface-style": {
-        "type": "combobox",
-        "default": "Simple blur",
-        "description": "Surface style",
-        "options": {
-            "Simple blur": "disabled",
-            "Glass pane": "pane",
-            "Tempered glass": "tempered"
-        }
+    "section-notifications": {
+      "type": "section",
+      "title": "Notifications",
+      "dependency": "backgd-blur-notifications",
+      "keys": [
+        "surface-style-notifications",
+        "light-refraction-notifications",
+        "backgd-blur-strength-notifications"
+      ]
+    },
+    "section-about": {
+      "type": "section",
+      "title": "Information",
+      "keys": [
+        "about-label",
+        "website_btn"
+      ]
     }
+  },
+  "backgd-blur-menus": {
+    "type": "switch",
+    "default": true,
+    "description": "Popup menus"
+  },
+  "backgd-blur-notifications": {
+    "type": "switch",
+    "default": true,
+    "description": "Notifications"
+  },
+  "surface-style-menus": {
+    "type": "combobox",
+    "default": "disabled",
+    "description": "Surface style",
+    "options": {
+      "current theme": "disabled",
+      "glass pane": "pane",
+      "tempered glass": "tempered"
+    }
+  },
+  "surface-style-notifications": {
+    "type": "combobox",
+    "default": "disabled",
+    "description": "Surface style",
+    "options": {
+      "current theme": "disabled",
+      "glass pane": "pane",
+      "tempered glass": "tempered"
+    }
+  },
+  "backgd-blur-strength-menus": {
+    "type": "scale",
+    "default": 4,
+    "min": 0,
+    "max": 24,
+    "step": 1,
+    "description": "Blur strength"
+  },
+  "light-refraction-menus": {
+    "type": "combobox",
+    "default": "frost.webp",
+    "description": "Light refraction",
+    "options": {
+      "no refraction": "none",
+      "frost": "frost.webp",
+      "frost 2": "frost2.webp",
+      "black ice": "black_ice.webp",
+      "frozen": "frozen.webp",
+      "frozen 2": "frozen2.webp",
+      "ice": "ice.webp",
+      "underwater": "underwater.webp",
+      "mozaika": "mozaika.webp",
+      "crystal": "crystal.webp",
+      "glass brick": "glass_brick.webp",
+      "squares": "squares.webp",
+      "leather": "leather.webp",
+      "bricks": "bricks.webp",
+      "light rain": "rain.webp",
+      "downpour": "downpour.webp",
+      "lake": "lake.webp",
+      "pool": "pool.webp",
+      "diamonds": "diamonds.webp",
+      "cubes": "cubes.webp",
+      "hex": "hex.webp",
+      "bee clusters": "bee.webp",
+      "bee clusters 2": "bee2.webp",
+      "magma": "magma.webp",
+      "Vincent": "vincent.webp",
+      "plexiglass": "plexiglass.webp",
+      "plexiglass 2": "plexiglass2.webp",
+      "plexiglass 3": "plexiglass3.webp",
+      "plexiglass 4": "plexiglass4.webp"
+    }
+  },
+  "backgd-blur-strength-notifications": {
+    "type": "scale",
+    "default": 4,
+    "min": 0,
+    "max": 24,
+    "step": 1,
+    "description": "Blur strength"
+  },
+  "light-refraction-notifications": {
+    "type": "combobox",
+    "default": "frost.webp",
+    "description": "Light refraction",
+    "options": {
+      "no refraction": "none",
+      "frost": "frost.webp",
+      "frost 2": "frost2.webp",
+      "black ice": "black_ice.webp",
+      "frozen": "frozen.webp",
+      "frozen 2": "frozen2.webp",
+      "ice": "ice.webp",
+      "underwater": "underwater.webp",
+      "mozaika": "mozaika.webp",
+      "crystal": "crystal.webp",
+      "glass brick": "glass_brick.webp",
+      "squares": "squares.webp",
+      "leather": "leather.webp",
+      "bricks": "bricks.webp",
+      "light rain": "rain.webp",
+      "downpour": "downpour.webp",
+      "lake": "lake.webp",
+      "pool": "pool.webp",
+      "diamonds": "diamonds.webp",
+      "cubes": "cubes.webp",
+      "hex": "hex.webp",
+      "bee clusters": "bee.webp",
+      "bee clusters 2": "bee2.webp",
+      "magma": "magma.webp",
+      "Vincent": "vincent.webp",
+      "plexiglass": "plexiglass.webp",
+      "plexiglass 2": "plexiglass2.webp",
+      "plexiglass 3": "plexiglass3.webp",
+      "plexiglass 4": "plexiglass4.webp"
+    }
+  },
+  "about-label": {
+    "type": "label",
+    "description": "Semabe Theme Blur\n\nversion: 1.1"
+  },
+  "website_btn": {
+    "type": "button",
+    "description": "Website",
+    "callback": "btn_website_pressed"
+  }
 }

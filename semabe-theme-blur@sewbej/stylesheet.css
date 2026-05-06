@@ -768,8 +768,8 @@
 .semabe-blur-popup-tempered-azure .grouped-window-list-thumbnail-menu .item-box,
 .semabe-blur-notification-tempered-azure #notification {
   background-gradient-direction: vertical;
-  background-gradient-start: rgba(0, 24, 112, 0.4) !important;
-  background-gradient-end: rgba(0, 24, 112, 0.4) !important;
+  background-gradient-start: rgba(53, 122, 191, 0.2) !important;
+  background-gradient-end: rgba(0, 13, 61, 0.4) !important;
   box-shadow: 2px 2px 1.2px 0px rgba(71, 163, 255, 0.4) inset;
   border-color: rgba(0, 5, 23, 0.8);
   border-top: 0px;
@@ -801,8 +801,8 @@
   padding: 8px;
   border-radius: 10px 0 0 10px;
   background-gradient-direction: vertical;
-  background-gradient-start: rgba(71, 163, 255, 0.3);
-  background-gradient-end: rgba(53, 122, 191, 0.3);
+  background-gradient-start: rgba(71, 163, 255, 0.41);
+  background-gradient-end: rgba(53, 122, 191, 0.41);
   box-shadow: 2px 2px 1.2px 0px rgba(71, 163, 255, 0.4) inset;
   border-color: rgba(0, 5, 23, 0.7);
   border-top: 0px;
@@ -906,8 +906,8 @@
 .semabe-blur-popup-tempered-cinnamon .grouped-window-list-thumbnail-menu .item-box,
 .semabe-blur-notification-tempered-cinnamon #notification {
   background-gradient-direction: vertical;
-  background-gradient-start: rgba(115, 38, 0, 0.4) !important;
-  background-gradient-end: rgba(115, 38, 0, 0.4) !important;
+  background-gradient-start: rgba(191, 76, 19, 0.2) !important;
+  background-gradient-end: rgba(64, 21, 0, 0.4) !important;
   box-shadow: 2px 2px 1.2px 0px rgba(255, 102, 25, 0.4) inset;
   border-color: rgba(15, 5, 0, 0.8);
   border-top: 0px;
@@ -939,8 +939,8 @@
   padding: 8px;
   border-radius: 10px 0 0 10px;
   background-gradient-direction: vertical;
-  background-gradient-start: rgba(255, 102, 25, 0.3);
-  background-gradient-end: rgba(191, 76, 19, 0.3);
+  background-gradient-start: rgba(255, 102, 25, 0.41);
+  background-gradient-end: rgba(191, 76, 19, 0.41);
   box-shadow: 2px 2px 1.2px 0px rgba(255, 102, 25, 0.4) inset;
   border-color: rgba(15, 5, 0, 0.7);
   border-top: 0px;
@@ -1043,8 +1043,8 @@
 .semabe-blur-popup-tempered-crimson .grouped-window-list-thumbnail-menu .item-box,
 .semabe-blur-notification-tempered-crimson #notification {
   background-gradient-direction: vertical;
-  background-gradient-start: rgba(103, 0, 28, 0.4) !important;
-  background-gradient-end: rgba(103, 0, 28, 0.4) !important;
+  background-gradient-start: rgba(174, 59, 90, 0.2) !important;
+  background-gradient-end: rgba(52, 0, 14, 0.4) !important;
   box-shadow: 2px 2px 1.2px 0px rgba(255, 87, 129, 0.4) inset;
   border-color: rgba(13, 0, 3, 0.8);
   border-top: 0px;
@@ -1076,8 +1076,8 @@
   padding: 8px;
   border-radius: 10px 0 0 10px;
   background-gradient-direction: vertical;
-  background-gradient-start: rgba(255, 87, 129, 0.3);
-  background-gradient-end: rgba(174, 59, 90, 0.3);
+  background-gradient-start: rgba(255, 87, 129, 0.41);
+  background-gradient-end: rgba(174, 59, 90, 0.41);
   box-shadow: 2px 2px 1.2px 0px rgba(255, 87, 129, 0.4) inset;
   border-color: rgba(13, 0, 3, 0.7);
   border-top: 0px;
@@ -1180,8 +1180,8 @@
 .semabe-blur-popup-tempered-falcon .grouped-window-list-thumbnail-menu .item-box,
 .semabe-blur-notification-tempered-falcon #notification {
   background-gradient-direction: vertical;
-  background-gradient-start: rgba(85, 32, 52, 0.4) !important;
-  background-gradient-end: rgba(85, 32, 52, 0.4) !important;
+  background-gradient-start: rgba(144, 112, 124, 0.2) !important;
+  background-gradient-end: rgba(34, 13, 21, 0.4) !important;
   box-shadow: 2px 2px 1.2px 0px rgba(255, 199, 219, 0.4) inset;
   border-color: rgba(13, 4, 7, 0.8);
   border-top: 0px;
@@ -1213,8 +1213,8 @@
   padding: 8px;
   border-radius: 10px 0 0 10px;
   background-gradient-direction: vertical;
-  background-gradient-start: rgba(255, 199, 219, 0.3);
-  background-gradient-end: rgba(144, 112, 124, 0.3);
+  background-gradient-start: rgba(255, 199, 219, 0.41);
+  background-gradient-end: rgba(144, 112, 124, 0.41);
   box-shadow: 2px 2px 1.2px 0px rgba(255, 199, 219, 0.4) inset;
   border-color: rgba(13, 4, 7, 0.7);
   border-top: 0px;
@@ -1317,8 +1317,8 @@
 .semabe-blur-popup-tempered-grey .grouped-window-list-thumbnail-menu .item-box,
 .semabe-blur-notification-tempered-grey #notification {
   background-gradient-direction: vertical;
-  background-gradient-start: rgba(69, 69, 69, 0.4) !important;
-  background-gradient-end: rgba(69, 69, 69, 0.4) !important;
+  background-gradient-start: rgba(115, 115, 115, 0.2) !important;
+  background-gradient-end: rgba(18, 18, 18, 0.4) !important;
   box-shadow: 2px 2px 1.2px 0px rgba(254, 254, 254, 0.4) inset;
   border-color: rgba(10, 10, 10, 0.8);
   border-top: 0px;
@@ -1350,8 +1350,8 @@
   padding: 8px;
   border-radius: 10px 0 0 10px;
   background-gradient-direction: vertical;
-  background-gradient-start: rgba(254, 254, 254, 0.3);
-  background-gradient-end: rgba(115, 115, 115, 0.3);
+  background-gradient-start: rgba(254, 254, 254, 0.41);
+  background-gradient-end: rgba(115, 115, 115, 0.41);
   box-shadow: 2px 2px 1.2px 0px rgba(254, 254, 254, 0.4) inset;
   border-color: rgba(10, 10, 10, 0.7);
   border-top: 0px;
@@ -1454,8 +1454,8 @@
 .semabe-blur-popup-tempered-mint .grouped-window-list-thumbnail-menu .item-box,
 .semabe-blur-notification-tempered-mint #notification {
   background-gradient-direction: vertical;
-  background-gradient-start: rgba(0, 82, 39, 0.4) !important;
-  background-gradient-end: rgba(0, 82, 39, 0.4) !important;
+  background-gradient-start: rgba(43, 143, 90, 0.2) !important;
+  background-gradient-end: rgba(0, 31, 15, 0.4) !important;
   box-shadow: 2px 2px 1.2px 0px rgba(76, 255, 160, 0.4) inset;
   border-color: rgba(0, 13, 6, 0.8);
   border-top: 0px;
@@ -1487,8 +1487,8 @@
   padding: 8px;
   border-radius: 10px 0 0 10px;
   background-gradient-direction: vertical;
-  background-gradient-start: rgba(76, 255, 160, 0.3);
-  background-gradient-end: rgba(43, 143, 90, 0.3);
+  background-gradient-start: rgba(76, 255, 160, 0.41);
+  background-gradient-end: rgba(43, 143, 90, 0.41);
   box-shadow: 2px 2px 1.2px 0px rgba(76, 255, 160, 0.4) inset;
   border-color: rgba(0, 13, 6, 0.7);
   border-top: 0px;
@@ -1591,8 +1591,8 @@
 .semabe-blur-popup-tempered-nordic .grouped-window-list-thumbnail-menu .item-box,
 .semabe-blur-notification-tempered-nordic #notification {
   background-gradient-direction: vertical;
-  background-gradient-start: rgba(20, 39, 91, 0.4) !important;
-  background-gradient-end: rgba(20, 39, 91, 0.4) !important;
+  background-gradient-start: rgba(111, 124, 154, 0.2) !important;
+  background-gradient-end: rgba(9, 17, 40, 0.4) !important;
   box-shadow: 2px 2px 1.2px 0px rgba(184, 205, 255, 0.4) inset;
   border-color: rgba(4, 7, 15, 0.8);
   border-top: 0px;
@@ -1624,8 +1624,8 @@
   padding: 8px;
   border-radius: 10px 0 0 10px;
   background-gradient-direction: vertical;
-  background-gradient-start: rgba(184, 205, 255, 0.3);
-  background-gradient-end: rgba(111, 124, 154, 0.3);
+  background-gradient-start: rgba(184, 205, 255, 0.41);
+  background-gradient-end: rgba(111, 124, 154, 0.41);
   box-shadow: 2px 2px 1.2px 0px rgba(184, 205, 255, 0.4) inset;
   border-color: rgba(4, 7, 15, 0.7);
   border-top: 0px;
@@ -1728,8 +1728,8 @@
 .semabe-blur-popup-tempered-steel .grouped-window-list-thumbnail-menu .item-box,
 .semabe-blur-notification-tempered-steel #notification {
   background-gradient-direction: vertical;
-  background-gradient-start: rgba(62, 62, 69, 0.4) !important;
-  background-gradient-end: rgba(62, 62, 69, 0.4) !important;
+  background-gradient-start: rgba(104, 104, 115, 0.2) !important;
+  background-gradient-end: rgba(16, 16, 18, 0.4) !important;
   box-shadow: 2px 2px 1.2px 0px rgba(229, 229, 254, 0.4) inset;
   border-color: rgba(8, 8, 10, 0.8);
   border-top: 0px;
@@ -1761,8 +1761,8 @@
   padding: 8px;
   border-radius: 10px 0 0 10px;
   background-gradient-direction: vertical;
-  background-gradient-start: rgba(229, 229, 254, 0.3);
-  background-gradient-end: rgba(104, 104, 115, 0.3);
+  background-gradient-start: rgba(229, 229, 254, 0.4);
+  background-gradient-end: rgba(104, 104, 115, 0.4);
   box-shadow: 2px 2px 1.2px 0px rgba(229, 229, 254, 0.4) inset;
   border-color: rgba(8, 8, 10, 0.7);
   border-top: 0px;
@@ -1865,8 +1865,8 @@
 .semabe-blur-popup-tempered-violet .grouped-window-list-thumbnail-menu .item-box,
 .semabe-blur-notification-tempered-violet #notification {
   background-gradient-direction: vertical;
-  background-gradient-start: rgba(82, 8, 82, 0.4) !important;
-  background-gradient-end: rgba(82, 8, 82, 0.4) !important;
+  background-gradient-start: rgba(143, 74, 143, 0.2) !important;
+  background-gradient-end: rgba(31, 3, 31, 0.4) !important;
   box-shadow: 2px 2px 1.2px 0px rgba(255, 130, 255, 0.4) inset;
   border-color: rgba(13, 0, 13, 0.8);
   border-top: 0px;
@@ -1898,8 +1898,8 @@
   padding: 8px;
   border-radius: 10px 0 0 10px;
   background-gradient-direction: vertical;
-  background-gradient-start: rgba(255, 130, 255, 0.3);
-  background-gradient-end: rgba(143, 74, 143, 0.3);
+  background-gradient-start: rgba(255, 130, 255, 0.41);
+  background-gradient-end: rgba(143, 74, 143, 0.41);
   box-shadow: 2px 2px 1.2px 0px rgba(255, 130, 255, 0.4) inset;
   border-color: rgba(13, 0, 13, 0.7);
   border-top: 0px;

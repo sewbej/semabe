@@ -6,7 +6,7 @@ const PopupMenu = imports.ui.popupMenu;
 const Settings = imports.ui.settings;
 const Clutter = imports.gi.Clutter;
 
-const refresh_rate = 32;    // Blur refresh rate in milliseconds
+const refresh_rate = 32; // Blur refresh rate (milliseconds)
 
 class SemabeGlassDesigner {
 	constructor(metadata) {
@@ -21,7 +21,7 @@ class SemabeGlassDesigner {
 		this._themeHandlerId = this._desktopSettings.connect('changed::name', () => {
 			let currentTheme = this._desktopSettings.get_string('name');
 			this._updateGlassShadeFromTheme(currentTheme);
-		//	Main.notify("Semabe Glass Blur", `Theme color: ${this.glassShade}`);
+			// Main.notify("Semabe Glass Blur", `Theme color: ${this.glassShade}`);
 			this._updateColorClassesOnExisting();
 		});
 
@@ -38,12 +38,21 @@ class SemabeGlassDesigner {
 	_bindSettings() {
 		this._settings.bind("backgd-blur-menus", "backgdBlurMenus");
 		this._settings.bind("backgd-blur-notifications", "backgdBlurNotifications");
-		this._settings.bind("backgd-blur-strength", "bgBlurStrength");
-		this._settings.bind("surface-style", "surfaceStyle");
+		this._settings.bind("surface-style-menus", "surfaceStyleMenus");
+		this._settings.bind("surface-style-notifications", "surfaceStyleNotifications");
+		this._settings.bind("backgd-blur-strength-menus", "bgBlurStrengthMenus");
+		this._settings.bind("light-refraction-menus", "lightRefractionMenus");
+		this._settings.bind("backgd-blur-strength-notifications", "bgBlurStrengthNotifications");
+		this._settings.bind("light-refraction-notifications", "lightRefractionNotifications");
 
-		this._settings.connect("changed::surface-style", () => this._updateColorClassesOnExisting());
+		this._settings.connect("changed::surface-style-menus", () => this._updateColorClassesOnExisting());
+		this._settings.connect("changed::surface-style-notifications", () => this._updateColorClassesOnExisting());
 		this._settings.connect("changed::backgd-blur-menus", () => this._updatePatches());
 		this._settings.connect("changed::backgd-blur-notifications", () => this._updatePatches());
+	}
+
+	btn_website_pressed() {
+		Gio.app_info_launch_default_for_uri("https://www.cinnamon-look.org/p/2025684", null);
 	}
 
 	_updateGlassShadeFromTheme(themeName) {
@@ -98,15 +107,33 @@ class SemabeGlassDesigner {
 		this._updateColorClassesOnExisting();
 	}
 
-	_applyColorClass(actor, baseName) {
+	_applyColorClassMenus(actor, baseName) {
 		if (!actor || typeof actor.add_style_class_name !== 'function') return;
 
 		this._removeStylerClassesOnly(actor);
 
-		if (this.surfaceStyle === "pane") {
+		if (this.surfaceStyleMenus === "pane") {
 			actor.add_style_class_name(`${baseName}-pane-${this.glassShade}`);
-		} else if (this.surfaceStyle === "tempered") {
+		} else if (this.surfaceStyleMenus === "tempered") {
 			actor.add_style_class_name(`${baseName}-tempered-${this.glassShade}`);
+		//} else if (this.surfaceStyleMenus === "plexi") {
+		//	actor.add_style_class_name(`${baseName}-plexi-${this.glassShade}`);
+		}
+
+		actor.queue_redraw();
+	}
+
+	_applyColorClassNotifications(actor, baseName) {
+		if (!actor || typeof actor.add_style_class_name !== 'function') return;
+
+		this._removeStylerClassesOnly(actor);
+
+		if (this.surfaceStyleNotifications === "pane") {
+			actor.add_style_class_name(`${baseName}-pane-${this.glassShade}`);
+		} else if (this.surfaceStyleNotifications === "tempered") {
+			actor.add_style_class_name(`${baseName}-tempered-${this.glassShade}`);
+		//} else if (this.surfaceStyleNotifications === "plexi") {
+		//	actor.add_style_class_name(`${baseName}-plexi-${this.glassShade}`);
 		}
 
 		actor.queue_redraw();
@@ -149,11 +176,11 @@ class SemabeGlassDesigner {
 			}
 
 			if (this.backgdBlurMenus && (hasMenuClass || actorStr.toLowerCase().includes('menu'))) {
-				this._applyColorClass(actor, 'semabe-blur-popup');
+				this._applyColorClassMenus(actor, 'semabe-blur-popup');
 			}
 
 			if (this.backgdBlurNotifications && actorStr.includes('Notification')) {
-				this._applyColorClass(actor, 'semabe-blur-notification');
+				this._applyColorClassNotifications(actor, 'semabe-blur-notification');
 			}
 		});
 	}
@@ -179,11 +206,12 @@ class SemabeGlassDesigner {
 
 		let applyStyles = () => {
 			if (!actor || actor.is_finalized?.()) return;
-			this._applyColorClass(actor, 'semabe-blur-popup');
+			this._applyColorClassMenus(actor, 'semabe-blur-popup');
 			actor.set_style(`
-            background-blur: ${this.bgBlurStrength}px; 
-            border-radius: 12px;
-        `);
+background-blur: ${this.bgBlurStrengthMenus}px;
+background-bumpmap: ${this.lightRefractionMenus === 'none' ? 'none' : `url("${GLib.get_home_dir()}/.local/share/cinnamon/extensions/semabe-theme-blur@sewbej/refraction/${this.lightRefractionMenus}")`};
+border-radius: 12px;
+`);
 		};
 
 		applyStyles();
@@ -246,15 +274,16 @@ class SemabeGlassDesigner {
 		if (!actor || actor.is_finalized?.()) return;
 
 		actor.set_style(`
-        background-color: transparent !important;
-        background-blur: ${this.bgBlurStrength}px;
-        border-radius: 12px;
-        margin: 0px !important;
-    `);
+background-color: transparent !important;
+background-blur: ${this.bgBlurStrengthNotifications}px;
+background-bumpmap: ${this.lightRefractionNotifications === 'none' ? 'none' : `url("${GLib.get_home_dir()}/.local/share/cinnamon/extensions/semabe-theme-blur@sewbej/refraction/${this.lightRefractionNotifications}")`};
+border-radius: 12px;
+margin: 0px !important;
+`);
 
 		GLib.timeout_add(GLib.PRIORITY_DEFAULT, 50, () => {
 			if (actor && !actor.is_finalized?.()) {
-				this._applyColorClass(actor, 'semabe-blur-notification');
+				this._applyColorClassNotifications(actor, 'semabe-blur-notification');
 			}
 			return GLib.SOURCE_REMOVE;
 		});
@@ -287,11 +316,15 @@ class SemabeGlassDesigner {
 
 		PopupMenu.PopupMenu.prototype.open = function(animate) {
 			self._origPopupMenuOpen.call(this, animate);
-			self._applyColorClass(this.actor, 'semabe-blur-popup');
-			this.actor.set_style(`background-blur: ${self.bgBlurStrength}px; border-radius: 12px;`);
+			self._applyColorClassMenus(this.actor, 'semabe-blur-popup');
+			this.actor.set_style(`
+background-blur: ${self.bgBlurStrengthMenus}px;
+background-bumpmap: ${self.lightRefractionMenus === 'none' ? 'none' : `url("${GLib.get_home_dir()}/.local/share/cinnamon/extensions/semabe-theme-blur@sewbej/refraction/${self.lightRefractionMenus}")`};
+border-radius: 12px;
+`);
 
-			this.actor.set_translation(0, 0, 1);
-			if (this.box) this.box.set_translation(0, 0, -1);
+			this.actor.set_translation(0.6, 0, 0.6);
+			if (this.box) this.box.set_translation(-0.6, 0, -0.6);
 
 			if (this._menuBlurRedrawId) GLib.source_remove(this._menuBlurRedrawId);
 			this._menuBlurRedrawId = GLib.timeout_add(GLib.PRIORITY_DEFAULT, refresh_rate, () => {
@@ -359,8 +392,17 @@ class SemabeGlassDesigner {
 	}
 }
 
+
+
+
 let styler = null;
 let savedMetadata = null;
+
+var Callbacks = {
+	btn_website_pressed: function() {
+		this.btn_website_pressed();
+	}
+};
 
 function init(metadata) {
 	savedMetadata = metadata;
@@ -368,6 +410,13 @@ function init(metadata) {
 
 function enable() {
 	styler = new SemabeGlassDesigner(savedMetadata);
+
+	let boundCallbacks = {};
+	Object.keys(Callbacks).forEach(k => {
+		boundCallbacks[k] = Callbacks[k].bind(styler);
+	});
+
+	return boundCallbacks;
 }
 
 function disable() {
